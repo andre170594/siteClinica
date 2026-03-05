@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <title>Clínica Bem-Estar</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Clínica de saúde focada no bem-estar, com serviços de Psicologia, Terapia da Fala e Terapia Ocupacional." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="assets/css/base.css">
+
+</head>
+<body>
+
+<!-- LOADER -->
+<div id="site-loader">
+  <div class="loader-content">
+    <div class="loader-spinner"></div>
+    <p>Clínica Bem-Estar</p>
+  </div>
+</div>
+
+
+
+<div class="page">
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <nav class="nav" id="mainNav">
+        <div class="logo">
+          <div class="logo-icon">CB</div>
+          <div>
+            <div class="logo-text-main">Clínica Bem-Estar</div>
+            <div class="logo-text-sub">Cuidar de si, com calma.</div>
+          </div>
+        </div>
+        <div class="nav-links">
+          <a href="#inicio">Início</a>
+          <a href="#servicos">Serviços</a>
+          <a href="#equipa">Equipa</a>
+          <a href="#galeria">Galeria</a>
+          <a href="#contacto">Contacto</a>
+        </div>
+        <div class="nav-cta">
+          <button class="btn btn-outline" onclick="scrollToSection('servicos')">Ver serviços</button>
+          <button class="btn btn-outline" onclick="scrollToSection('contactos')">
+            <span>Entre em contacto</span>
+            <span class="btn-icon">✉️</span>
+          </button>
+        </div>
+        <button class="nav-toggle" aria-label="Abrir menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main -->
+  <main>
+
+    <!-- Hero com Slider -->
+    <section id="inicio" class="hero">
+      <div class="hero-slider">
+        <div class="slide active" style="background-image:url('assets/images/hero4.jpg')"></div>
+        <div class="slide" style="background-image:url('assets/images/hero1.jpg')"></div>
+        <div class="slide" style="background-image:url('assets/images/hero3.jpg')"></div>
+      </div>
+      <div class="hero-content">
+        <h1 class="hero-title">
+          Cuidamos da sua saúde<br />
+          com <span>empatia, calma e profissionalismo.</span>
+        </h1>
+        <p class="hero-subtitle">
+          Na Clínica Bem-Estar, colocamos o seu bem-estar no centro de tudo o que fazemos.
+        </p>
+        <div class="hero-actions">
+          <button class="btn btn-outline" onclick="scrollToSection('contactos')">
+            <span>Entre em contacto</span>
+            <span class="btn-icon">✉️</span>
+          </button>
+          <button class="btn btn-outline" onclick="scrollToSection('servicos')">Conhecer serviços</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Serviços (Call-to-action) -->
+    <section id="servicoMarker" class="cta">
+      <div class="container cta-card">
+        <h2>Consulte os nossos serviços</h2>
+        <p>Varios tipos de serviços ao seu dipor.</p>
+        <button class="btn btn-outline" onclick="scrollToSection('servicos')">Ver Serviços</button>
+      </div>
+    </section>
+
+
+    <!-- Serviços -->
+    <section id="servicos" class="services fade-section">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-kicker">Serviços</div>
+          <h2 class="section-title">
+            Cuidar de si, em diferentes dimensões da saúde.
+          </h2>
+        </div>
+
+        <div class="services-grid">
+
+          <!-- Terapia da Fala -->
+          <article class="service-card" data-service="fala">
+            <div class="service-card-inner">
+              <div class="service-icon">🗣</div>
+              <h3 class="service-title">Terapia da Fala</h3>
+              <p class="service-text">
+                Avaliação e intervenção em dificuldades de comunicação, linguagem e fala.
+              </p>
+            </div>
+
+            <div class="service-expanded">
+              <button class="service-close">&times;</button>
+              <h3>Terapia da Fala</h3>
+              <p>
+                Intervenção especializada para crianças e adultos.
+              </p>
+              <ul class="service-details">
+                <li>Dificuldades de articulação</li>
+                <li>Gaguez e fluência</li>
+                <li>Atrasos de linguagem</li>
+                <li>Perturbações da comunicação</li>
+                <li>Reabilitação pós-AVC</li>
+              </ul>
+              <p>
+                Plano terapêutico personalizado e centrado na pessoa.
+              </p>
+            </div>
+          </article>
+
+          <!-- Psicologia -->
+          <article class="service-card" data-service="psicologia">
+            <div class="service-card-inner">
+              <div class="service-icon">🧠</div>
+              <h3 class="service-title">Psicologia</h3>
+              <p class="service-text">
+                Apoio psicológico em momentos de ansiedade, stress e desafios emocionais.
+              </p>
+            </div>
+
+            <div class="service-expanded">
+              <button class="service-close">&times;</button>
+              <h3>Psicologia</h3>
+              <p>
+                Acompanhamento emocional individualizado.
+              </p>
+              <ul class="service-details">
+                <li>Ansiedade e depressão</li>
+                <li>Gestão de stress</li>
+                <li>Autoestima e desenvolvimento pessoal</li>
+                <li>Apoio em luto</li>
+                <li>Psicologia infantil</li>
+              </ul>
+              <p>
+                Espaço seguro, confidencial e empático.
+              </p>
+            </div>
+          </article>
+
+          <!-- Terapia Ocupacional -->
+          <article class="service-card" data-service="ocupacional">
+            <div class="service-card-inner">
+              <div class="service-icon">🤲</div>
+              <h3 class="service-title">Terapia Ocupacional</h3>
+              <p class="service-text">
+                Intervenção focada na autonomia no dia a dia.
+              </p>
+            </div>
+
+            <div class="service-expanded">
+              <button class="service-close">&times;</button>
+              <h3>Terapia Ocupacional</h3>
+              <p>
+                Promoção da independência funcional.
+              </p>
+              <ul class="service-details">
+                <li>Autonomia nas atividades diárias</li>
+                <li>Integração sensorial</li>
+                <li>Reabilitação física</li>
+                <li>Intervenção pediátrica</li>
+                <li>Adaptação ao contexto escolar</li>
+              </ul>
+              <p>
+                Foco na melhoria da qualidade de vida.
+              </p>
+            </div>
+          </article>
+
+          <!-- Terapia Ocupacional -->
+          <article class="service-card" data-service="ocupacional">
+            <div class="service-card-inner">
+              <div class="service-icon">🤲</div>
+              <h3 class="service-title">Terapia Ocupacional</h3>
+              <p class="service-text">
+                Intervenção focada na autonomia no dia a dia.
+              </p>
+            </div>
+
+            <div class="service-expanded">
+              <button class="service-close">&times;</button>
+              <h3>Terapia Ocupacional</h3>
+              <p>
+                Promoção da independência funcional.
+              </p>
+              <ul class="service-details">
+                <li>Autonomia nas atividades diárias</li>
+                <li>Integração sensorial</li>
+                <li>Reabilitação física</li>
+                <li>Intervenção pediátrica</li>
+                <li>Adaptação ao contexto escolar</li>
+              </ul>
+              <p>
+                Foco na melhoria da qualidade de vida.
+              </p>
+            </div>
+          </article>
+
+          <!-- Terapia Ocupacional -->
+          <article class="service-card" data-service="ocupacional">
+            <div class="service-card-inner">
+              <div class="service-icon">🤲</div>
+              <h3 class="service-title">Terapia Ocupacional</h3>
+              <p class="service-text">
+                Intervenção focada na autonomia no dia a dia.
+              </p>
+            </div>
+
+            <div class="service-expanded">
+              <button class="service-close">&times;</button>
+              <h3>Terapia Ocupacional</h3>
+              <p>
+                Promoção da independência funcional.
+              </p>
+              <ul class="service-details">
+                <li>Autonomia nas atividades diárias</li>
+                <li>Integração sensorial</li>
+                <li>Reabilitação física</li>
+                <li>Intervenção pediátrica</li>
+                <li>Adaptação ao contexto escolar</li>
+              </ul>
+              <p>
+                Foco na melhoria da qualidade de vida.
+              </p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+
+      <!-- Overlay Global -->
+      <div class="services-overlay"></div>
+    </section>
+
+
+
+    <!-- Equipa (Call-to-action) -->
+    <section id="equipaMarker" class="cta">
+      <div class="container cta-card">
+        <h2>Conheça a nossa equipa</h2>
+        <p>Uma Equipa Multifacetada à sua espera .</p>
+        <button class="btn btn-outline" onclick="scrollToSection('equipa')">Ver equipa</button>
+      </div>
+    </section>
+
+    <section id="equipa" class="team fade-section">
+
+      <div class="container">
+
+        <div class="section-header">
+          <div class="section-kicker">Equipa</div>
+          <h2 class="section-title">
+            Profissionais próximos, humanos e especializados.
+          </h2>
+        </div>
+
+        <div class="team-slider">
+
+          <div class="team-track">
+
+            <!-- CARD -->
+            <article class="team-card">
+              <div class="team-header">
+                <img src="assets/icons/equipa/user01.png" alt="Joana Alcaide" class="team-avatar-img">
+
+                <div>
+                  <div class="team-name">Joana Alcaide</div>
+                  <div class="team-role">Terapeuta da Fala</div>
+                </div>
+              </div>
+
+              <p class="team-bio">
+                Experiência em intervenção com crianças e adolescentes.
+              </p>
+
+              <div class="team-extra">
+                <p>
+                  Especialista em perturbações da comunicação e linguagem.
+                </p>
+              </div>
+            </article>
+
+            <!-- repetir os outros -->
+
+            <!-- CARD -->
+            <article class="team-card">
+              <div class="team-header">
+                <img src="assets/icons/equipa/user02.png" alt="Pamela Domingues" class="team-avatar-img">
+
+                <div>
+                  <div class="team-name">Pamela Domingues</div>
+                  <div class="team-role">Terapeuta das viagens</div>
+                </div>
+              </div>
+
+              <p class="team-bio">
+                Experiência em intervenção com crianças e adolescentes.
+              </p>
+
+              <div class="team-extra">
+                <p>
+                  Especialista em perturbações da comunicação e linguagem.
+                </p>
+              </div>
+            </article>
+
+            <!-- CARD -->
+            <article class="team-card">
+              <div class="team-header">
+                <img src="assets/icons/equipa/user01.png" alt="Joana Alcaide" class="team-avatar-img">
+
+                <div>
+                  <div class="team-name">Joana Alcaide</div>
+                  <div class="team-role">Terapeuta da Fala</div>
+                </div>
+              </div>
+
+              <p class="team-bio">
+                Experiência em intervenção com crianças e adolescentes.
+              </p>
+
+              <div class="team-extra">
+                <p>
+                  Especialista em perturbações da comunicação e linguagem.
+                </p>
+              </div>
+            </article>
+
+            <!-- repetir os outros -->
+
+            <!-- CARD -->
+            <article class="team-card">
+              <div class="team-header">
+                <img src="assets/icons/equipa/user02.png" alt="Pamela Domingues" class="team-avatar-img">
+
+                <div>
+                  <div class="team-name">Pamela Domingues</div>
+                  <div class="team-role">Terapeuta das viagens</div>
+                </div>
+              </div>
+
+              <p class="team-bio">
+                Experiência em intervenção com crianças e adolescentes.
+              </p>
+
+              <div class="team-extra">
+                <p>
+                  Especialista em perturbações da comunicação e linguagem.
+                </p>
+              </div>
+            </article>
+            <!-- CARD -->
+            <article class="team-card">
+              <div class="team-header">
+                <img src="assets/icons/equipa/user01.png" alt="Joana Alcaide" class="team-avatar-img">
+
+                <div>
+                  <div class="team-name">Joana Alcaide</div>
+                  <div class="team-role">Terapeuta da Fala</div>
+                </div>
+              </div>
+
+              <p class="team-bio">
+                Experiência em intervenção com crianças e adolescentes.
+              </p>
+
+              <div class="team-extra">
+                <p>
+                  Especialista em perturbações da comunicação e linguagem.
+                </p>
+              </div>
+            </article>
+
+            <!-- repetir os outros -->
+
+            <!-- CARD -->
+            <article class="team-card">
+              <div class="team-header">
+                <img src="assets/icons/equipa/user02.png" alt="Pamela Domingues" class="team-avatar-img">
+
+                <div>
+                  <div class="team-name">Pamela Domingues</div>
+                  <div class="team-role">Terapeuta das viagens</div>
+                </div>
+              </div>
+
+              <p class="team-bio">
+                Experiência em intervenção com crianças e adolescentes.
+              </p>
+
+              <div class="team-extra">
+                <p>
+                  Especialista em perturbações da comunicação e linguagem.
+                </p>
+              </div>
+            </article>
+            <!-- CARD -->
+            <article class="team-card">
+              <div class="team-header">
+                <img src="assets/icons/equipa/user01.png" alt="Joana Alcaide" class="team-avatar-img">
+
+                <div>
+                  <div class="team-name">Joana Alcaide</div>
+                  <div class="team-role">Terapeuta da Fala</div>
+                </div>
+              </div>
+
+              <p class="team-bio">
+                Experiência em intervenção com crianças e adolescentes.
+              </p>
+
+              <div class="team-extra">
+                <p>
+                  Especialista em perturbações da comunicação e linguagem.
+                </p>
+              </div>
+            </article>
+
+            <!-- repetir os outros -->
+
+            <!-- CARD -->
+            <article class="team-card">
+              <div class="team-header">
+                <img src="assets/icons/equipa/user02.png" alt="Pamela Domingues" class="team-avatar-img">
+
+                <div>
+                  <div class="team-name">Pamela Domingues</div>
+                  <div class="team-role">Terapeuta das viagens</div>
+                </div>
+              </div>
+
+              <p class="team-bio">
+                Experiência em intervenção com crianças e adolescentes.
+              </p>
+
+              <div class="team-extra">
+                <p>
+                  Especialista em perturbações da comunicação e linguagem.
+                </p>
+              </div>
+            </article>
+            <!-- CARD -->
+            <article class="team-card">
+              <div class="team-header">
+                <img src="assets/icons/equipa/user01.png" alt="Joana Alcaide" class="team-avatar-img">
+
+                <div>
+                  <div class="team-name">Joana Alcaide</div>
+                  <div class="team-role">Terapeuta da Fala</div>
+                </div>
+              </div>
+
+              <p class="team-bio">
+                Experiência em intervenção com crianças e adolescentes.
+              </p>
+
+              <div class="team-extra">
+                <p>
+                  Especialista em perturbações da comunicação e linguagem.
+                </p>
+              </div>
+            </article>
+
+            <!-- repetir os outros -->
+
+            <!-- CARD -->
+            <article class="team-card">
+              <div class="team-header">
+                <img src="assets/icons/equipa/user02.png" alt="Pamela Domingues" class="team-avatar-img">
+
+                <div>
+                  <div class="team-name">Pamela Domingues</div>
+                  <div class="team-role">Terapeuta das viagens</div>
+                </div>
+              </div>
+
+              <p class="team-bio">
+                Experiência em intervenção com crianças e adolescentes.
+              </p>
+
+              <div class="team-extra">
+                <p>
+                  Especialista em perturbações da comunicação e linguagem.
+                </p>
+              </div>
+            </article>
+            <!-- CARD -->
+            <article class="team-card">
+              <div class="team-header">
+                <img src="assets/icons/equipa/user01.png" alt="Joana Alcaide" class="team-avatar-img">
+
+                <div>
+                  <div class="team-name">Joana Alcaide</div>
+                  <div class="team-role">Terapeuta da Fala</div>
+                </div>
+              </div>
+
+              <p class="team-bio">
+                Experiência em intervenção com crianças e adolescentes.
+              </p>
+
+              <div class="team-extra">
+                <p>
+                  Especialista em perturbações da comunicação e linguagem.
+                </p>
+              </div>
+            </article>
+
+            <!-- repetir os outros -->
+
+            <!-- CARD -->
+            <article class="team-card">
+              <div class="team-header">
+                <img src="assets/icons/equipa/user02.png" alt="Pamela Domingues" class="team-avatar-img">
+
+                <div>
+                  <div class="team-name">Pamela Domingues</div>
+                  <div class="team-role">Terapeuta das viagens</div>
+                </div>
+              </div>
+
+              <p class="team-bio">
+                Experiência em intervenção com crianças e adolescentes.
+              </p>
+
+              <div class="team-extra">
+                <p>
+                  Especialista em perturbações da comunicação e linguagem.
+                </p>
+              </div>
+            </article>
+            <!-- CARD -->
+            <article class="team-card">
+              <div class="team-header">
+                <img src="assets/icons/equipa/user01.png" alt="Joana Alcaide" class="team-avatar-img">
+
+                <div>
+                  <div class="team-name">Joana Alcaide</div>
+                  <div class="team-role">Terapeuta da Fala</div>
+                </div>
+              </div>
+
+              <p class="team-bio">
+                Experiência em intervenção com crianças e adolescentes.
+              </p>
+
+              <div class="team-extra">
+                <p>
+                  Especialista em perturbações da comunicação e linguagem.
+                </p>
+              </div>
+            </article>
+
+            <!-- repetir os outros -->
+
+            <!-- CARD -->
+            <article class="team-card">
+              <div class="team-header">
+                <img src="assets/icons/equipa/user02.png" alt="Pamela Domingues" class="team-avatar-img">
+
+                <div>
+                  <div class="team-name">Pamela Domingues</div>
+                  <div class="team-role">Terapeuta das viagens</div>
+                </div>
+              </div>
+
+              <p class="team-bio">
+                Experiência em intervenção com crianças e adolescentes.
+              </p>
+
+              <div class="team-extra">
+                <p>
+                  Especialista em perturbações da comunicação e linguagem.
+                </p>
+              </div>
+            </article>
+            <!-- CARD -->
+            <article class="team-card">
+              <div class="team-header">
+                <img src="assets/icons/equipa/user01.png" alt="Joana Alcaide" class="team-avatar-img">
+
+                <div>
+                  <div class="team-name">Joana Alcaide</div>
+                  <div class="team-role">Terapeuta da Fala</div>
+                </div>
+              </div>
+
+              <p class="team-bio">
+                Experiência em intervenção com crianças e adolescentes.
+              </p>
+
+              <div class="team-extra">
+                <p>
+                  Especialista em perturbações da comunicação e linguagem.
+                </p>
+              </div>
+            </article>
+
+            <!-- repetir os outros -->
+
+            <!-- CARD -->
+            <article class="team-card">
+              <div class="team-header">
+                <img src="assets/icons/equipa/user02.png" alt="Pamela Domingues" class="team-avatar-img">
+
+                <div>
+                  <div class="team-name">Pamela Domingues</div>
+                  <div class="team-role">Terapeuta das viagens</div>
+                </div>
+              </div>
+
+              <p class="team-bio">
+                Experiência em intervenção com crianças e adolescentes.
+              </p>
+
+              <div class="team-extra">
+                <p>
+                  Especialista em perturbações da comunicação e linguagem.
+                </p>
+              </div>
+            </article>
+
+
+
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- galeria (Call-to-action) -->
+    <section id="espacosMarker" class="cta">
+      <div class="container cta-card">
+        <h2>Conheça o nosso espaço</h2>
+      </div>
+    </section>
+
+    <!-- Galeria / Fotos -->
+    <section id="galeria" class="gallery fade-section">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-kicker">Galeria</div>
+          <h2 class="section-title">Espaços e momentos da clínica</h2>
+        </div>
+        <div class="gallery-slider">
+          <div class="gallery-slide"><img src="assets/images/hero4.jpg" alt="Sala 1"></div>
+          <div class="gallery-slide"><img src="assets/images/hero4.jpg" alt="Sala 2"></div>
+          <div class="gallery-slide"><img src="assets/images/hero4.jpg" alt="Sala 3"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Marque uma consulta (Call-to-action) -->
+    <section id="consulta" class="cta">
+      <div class="container cta-card">
+        <h2>Marque já a sua consulta</h2>
+        <p>Entre em contacto connosco e agende o seu atendimento personalizado.</p>
+        <button class="btn btn-outline" onclick="scrollToSection('contacto')">Marcar consulta</button>
+      </div>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contactos" class="contact fade-section">
+      <div class="container">
+        <div class="contact-wrapper">
+
+          <!-- COLUNA ESQUERDA -->
+          <div class="contact-left">
+            <h2>Informações de contacto</h2>
+            <p class="contact-subtitle">
+              Questões ou esclarecimentos? Entre em contacto connosco!
+              Estamos disponíveis para ajudar!
+            </p>
+
+            <div class="contact-item">
+              <div class="contact-icon">📍</div>
+              <div>
+                <p>Rua do Bem-Estar, 123</p>
+                <p>3000-000 Coimbra</p>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon">📞</div>
+              <div>
+                <p>+351 91 234 56 78</p>
+                <small>(Chamada para a rede móvel nacional)</small>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon">✉️</div>
+              <div>
+                <p>geral@clinicabemestar.pt</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- COLUNA DIREITA (FORM) -->
+          <div class="contact-form-box">
+            <h3>Fale Connosco</h3>
+
+            <form id="contactForm" class="contact-form">
+              <input type="text" name="nome" placeholder="*Nome" required>
+              <input type="email" name="email" placeholder="*Email" required>
+              <input type="tel" name="telefone" placeholder="Telefone">
+              <textarea name="mensagem" placeholder="Mensagem" required></textarea>
+
+              <label class="checkbox">
+                <input type="checkbox" required>
+                Li e concordo com a Política de Privacidade
+              </label>
+
+              <button type="submit" class="btn-submit">Submeter</button>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- gps (Call-to-action) -->
+    <section id="gpsMarker" class="cta">
+      <div class="container cta-card">
+        <h2>Quer saber onde estamos?</h2>
+      </div>
+    </section>
+
+
+    <!-- Mapa da localização -->
+    <section id="mapa" class="map-fullwidth">
+      <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3110.123456789!2d-8.418!3d40.203!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd12345abcdef%3A0xabcdef123456!2sCl%C3%ADnica%20Bem-Estar!5e0!3m2!1spt-PT!2spt!4v1671234567890!5m2!1spt-PT!2spt"
+              width="100%"
+              height="450"
+              style="border:0;"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </section>
+
+  </main>
+
+  <!-- Marque uma consulta (Call-to-action) -->
+  <section id="anteFooter" class="ctaFooter">
+    <div class="container cta-cardFooter">
+      <h2>Onde Estamos</h2>
+      <br>
+      <p>Rua do vinho,N8.</p>
+      <p>7050-090 Montemor-o-Novo</p>
+
+    </div>
+    <div class="container cta-cardFooter">
+      <h2>Contactos</h2>
+      <br>
+      <p>927 465 938</p>
+      <p>geral@encantoclinica.pt</p>
+
+      <div class="contact-item" style="margin-top: 10px;">
+        <div class="contact-icon">I</div>
+        <div class="contact-icon">✉️</div>
+        <div class="contact-icon">F</div>
+      </div>
+
+
+    </div>
+
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-inner">
+      <div>© <span id="year"></span> Clínica Bem-Estar. Todos os direitos reservados.</div>
+    </div>
+  </footer>
+
+</div>
+
+<script src="assets/js/main.js"></script>
+<script src="assets/js/form.js"></script>
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1000,
+    once: true
+  });
+</script>
+
+
+</body>
+</html>
