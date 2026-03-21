@@ -50,9 +50,11 @@
           <a href="#contacto">Contacto</a>
         </div>
         <div class="nav-cta">
-          <button class="btn btn-outline" onclick="scrollToSection('servicos')">Ver serviços</button>
-          <button class="btn btn-outline" onclick="scrollToSection('contactos')">
-            <span>Entre em contacto</span>
+          <button class="btn btn-outline2" id="btn_face" onclick="scrollToSection('equipa')">
+            <img src="assets/icons/face.png" alt="Icone Face" />
+          </button>
+          <button class="btn btn-outline2" id="btn_insta" onclick="scrollToSection('equipa')">
+            <img src="assets/icons/insta.png" alt="Icone Instagram" />
           </button>
         </div>
         <button class="nav-toggle" aria-label="Abrir menu">
@@ -248,8 +250,8 @@
 
             <div class="team-overlay">
               <h3>Pamela Domingues</h3>
-              <span>Psicologia</span>
-              <p>Apoio emocional com foco no bem-estar e equilíbrio mental.</p>
+              <span>Terapeuta das Viagens</span>
+              <p>Apoio emocional se possível com marcação de um spa!.</p>
             </div>
           </article>
 
@@ -288,18 +290,28 @@
 
     <!-- Galeria / Fotos -->
     <section id="galeria" class="gallery fade-section">
-      <div class="container">
-        <div class="section-header">
-          <div class="section-kicker">Galeria</div>
-          <h2 class="section-title">Espaços e momentos da clínica</h2>
+
+      <div class="story-slider" id="storySlider">
+
+        <div class="story">
+          <div class="story-bars"><div class="bar"><span></span></div></div>
+          <img src="assets/images/hero1.jpg" alt="teste1">
         </div>
-        <div class="gallery-slider">
-          <div class="gallery-slide"><img src="assets/images/hero4.jpg" alt="Sala 1"></div>
-          <div class="gallery-slide"><img src="assets/images/hero4.jpg" alt="Sala 2"></div>
-          <div class="gallery-slide"><img src="assets/images/hero4.jpg" alt="Sala 3"></div>
+
+        <div class="story">
+          <div class="story-bars"><div class="bar"><span></span></div></div>
+          <img src="assets/images/hero4.jpg" alt="teste2">
         </div>
+
+        <div class="story">
+          <div class="story-bars"><div class="bar"><span></span></div></div>
+          <img src="assets/images/hero2.jpg" alt="teste33">
+        </div>
+
       </div>
+
     </section>
+
 
     <!-- Marque uma consulta (Call-to-action) -->
     <section id="consulta" class="cta">

@@ -28,7 +28,7 @@ html {
     --blue-main: #1f6fb2;
     --blue-light: #1680a6;
     --blue-pastel: #c7ddfa;
-    --gray-light: #ffffff;
+    --gray-light: rgba(157, 209, 200, 0);
     --gray-dark: #333333;
     --white: #ffffff;
     --radius-md: 0.5rem;
@@ -97,6 +97,26 @@ img {
 /*==============================
   HEADER & NAVBAR FIXA
 ==============================*/
+.nav-cta img {
+    width: 4rem;
+    height: 4rem;
+    object-fit: contain;
+    background: var(--gray-light);
+}
+
+.nav-cta .btn {
+    padding: 6px 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--gray-light);
+}
+
+.nav-cta {
+    display: flex;
+    gap: 8px; /* espaço entre os botões */
+}
+
 .nav {
     position: fixed;
     top: 0;
@@ -740,50 +760,83 @@ AUTO HOVER (JS)
 /*==============================
   GALERIA
 ==============================*/
+
 .gallery {
-    padding: 6rem 1rem;
+    padding: 1rem 1rem;
+    height: 70vh;
     background: var(--blue-light);
-    text-align: center;
 }
 
-.gallery-slider {
-    display: flex;
-    overflow-x: auto;
-    gap: 1.5rem;
-    scroll-snap-type: x mandatory;
-    padding-bottom: 1rem;
-    margin-top: 2rem;
-}
-
-.gallery-slide {
-    flex: 0 0 auto;
-    width: 300px;
-    height: 200px;
-    border-radius: var(--radius-lg);
+.story-slider {
+    height: 100%;
+    width: 100%;
+    position: relative;
     overflow: hidden;
-    scroll-snap-align: start;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.gallery-slide:hover {
-    transform: scale(1.05);
-    box-shadow: 0 14px 35px rgba(0,0,0,0.15);
+.story {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: opacity 0.5s ease;
 }
 
-.gallery-slide img {
+.story.active {
+    opacity: 1;
+}
+
+.story img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
+.fade-section.visible .story {
+    opacity: 0;
+}
+
+.fade-section.visible .story.active {
+    opacity: 1;
+}
+
+/*==============================
+  BARRAS DE PROGRESSO (IGUAL AO INSTAGRAM)
+==============================*/
+
+.story-bars {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    right: 12px;
+    display: flex;
+    gap: 6px;
+    z-index: 10;
+}
+
+.bar {
+    flex: 1;
+    height: 4px;
+    background: rgba(255,255,255,0.35);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.bar span {
+    display: block;
+    height: 100%;
+    width: 0%;
+    background: white;
+    border-radius: 10px;
+}
+
+/*==============================
+  RESPONSIVO
+==============================*/
 
 @media(max-width:768px){
     .gallery { padding: 4rem 1rem; }
-    .gallery-slide { width: 200px; height: 150px; }
+    .story img { height: 300px; }
     .section-title { font-size: 2rem; }
-    .section-subtitle { font-size: 1rem; }
 }
-
 
 /*==============================
   CONTACTO
