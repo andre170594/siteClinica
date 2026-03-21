@@ -29,7 +29,7 @@ nav.querySelectorAll("a[href^='#']").forEach((link) => {
     });
 });
 
-
+//
 
 // navbar scroll
 const navbar = document.getElementById("mainNav");
