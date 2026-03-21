@@ -15,9 +15,12 @@ function scrollToSection(id) {
 const navToggle = document.querySelector(".nav-toggle");
 const nav = document.querySelector(".nav");
 
+
 navToggle.addEventListener("click", () => {
     nav.classList.toggle("nav-open");
+
 });
+
 
 // Fecha menu ao clicar em links internos
 nav.querySelectorAll("a[href^='#']").forEach((link) => {
@@ -25,6 +28,8 @@ nav.querySelectorAll("a[href^='#']").forEach((link) => {
         nav.classList.remove("nav-open");
     });
 });
+
+
 
 // navbar scroll
 const navbar = document.getElementById("mainNav");
@@ -105,72 +110,67 @@ const cards = document.querySelectorAll(".service-card");
 const overlay = document.querySelector(".services-overlay");
 
 let activeExpanded = null;
-let activeCard = null;
+let originRect = null;
 
 cards.forEach(card => {
-
     const expanded = card.querySelector(".service-expanded");
     const closeBtn = card.querySelector(".service-close");
 
+    // ABRIR
     card.addEventListener("click", (e) => {
 
+        // evitar conflito com clique no X
         if (e.target.closest(".service-close")) return;
 
-        activeCard = card;
         activeExpanded = expanded;
+        originRect = card.getBoundingClientRect();
 
-        const rect = card.getBoundingClientRect();
-
-        // posição inicial (igual ao card)
-        expanded.style.top = rect.top + "px";
-        expanded.style.left = rect.left + "px";
-        expanded.style.width = rect.width + "px";
-        expanded.style.height = rect.height + "px";
+        expanded.style.top = originRect.top + "px";
+        expanded.style.left = originRect.left + "px";
+        expanded.style.width = originRect.width + "px";
 
         expanded.classList.add("active");
         overlay.classList.add("active");
-        document.body.style.overflow = "hidden";
 
-        requestAnimationFrame(() => {
-            expanded.style.transition = "all 0.6s cubic-bezier(.16,.84,.44,1)";
-            expanded.style.top = "50%";
-            expanded.style.left = "50%";
-            expanded.style.width = "700px";
-            expanded.style.maxWidth = "92%";
-            expanded.style.height = "auto";
-            expanded.style.transform = "translate(-50%, -50%)";
-        });
+        expanded.offsetHeight;
 
+        expanded.style.top = "50%";
+        expanded.style.left = "50%";
+        expanded.style.transform = "translate(-50%, -50%) scale(1)";
+        expanded.style.width = "500px";
     });
 
-    closeBtn.addEventListener("click", closeService);
+    // BOTÃO X (FECHAR)
+    closeBtn.addEventListener("click", (e) => {
+        e.stopPropagation();
+        closeCard();
+    });
 });
 
-overlay.addEventListener("click", closeService);
+// FECHAR
+function closeCard() {
 
-function closeService() {
+    if (!activeExpanded || !originRect) return;
 
-    if (!activeExpanded || !activeCard) return;
+    // força estado atual
+    activeExpanded.style.transform = "translate(-50%, -50%) scale(1)";
+    activeExpanded.offsetHeight;
 
-    const rect = activeCard.getBoundingClientRect();
-
-    activeExpanded.style.transition = "all 0.5s cubic-bezier(.16,.84,.44,1)";
-    activeExpanded.style.top = rect.top + "px";
-    activeExpanded.style.left = rect.left + "px";
-    activeExpanded.style.width = rect.width + "px";
-    activeExpanded.style.height = rect.height + "px";
-    activeExpanded.style.transform = "none";
+    // anima de volta
+    activeExpanded.style.top = originRect.top + "px";
+    activeExpanded.style.left = originRect.left + "px";
+    activeExpanded.style.width = originRect.width + "px";
+    activeExpanded.style.transform = "translate(0,0) scale(1)";
 
     overlay.classList.remove("active");
-    document.body.style.overflow = "auto";
 
     setTimeout(() => {
         activeExpanded.classList.remove("active");
-        activeExpanded.style = "";
         activeExpanded = null;
-        activeCard = null;
-    }, 500);
+        originRect = null;
+    }, 1);
 }
+overlay.addEventListener("click", closeCard);
 
 
 

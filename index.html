@@ -32,6 +32,7 @@
   <header>
     <div class="container">
       <nav class="nav" id="mainNav">
+        <div class="nav-overlay"></div>
         <div class="logo">
           <div class="logo-icon">CB</div>
           <div>
@@ -50,7 +51,6 @@
           <button class="btn btn-outline" onclick="scrollToSection('servicos')">Ver serviços</button>
           <button class="btn btn-outline" onclick="scrollToSection('contactos')">
             <span>Entre em contacto</span>
-            <span class="btn-icon">✉️</span>
           </button>
         </div>
         <button class="nav-toggle" aria-label="Abrir menu">
@@ -69,8 +69,8 @@
     <section id="inicio" class="hero">
       <div class="hero-slider">
         <div class="slide active" style="background-image:url('assets/images/hero4.jpg')"></div>
-        <div class="slide" style="background-image:url('assets/images/hero1.jpg')"></div>
-        <div class="slide" style="background-image:url('assets/images/hero3.jpg')"></div>
+        <div class="slide" style="background-image:url('assets/images/hero6.jpg')"></div>
+        <div class="slide" style="background-image:url('assets/images/hero5.jpg')"></div>
       </div>
       <div class="hero-content">
         <h1 class="hero-title">
@@ -83,7 +83,6 @@
         <div class="hero-actions">
           <button class="btn btn-outline" onclick="scrollToSection('contactos')">
             <span>Entre em contacto</span>
-            <span class="btn-icon">✉️</span>
           </button>
           <button class="btn btn-outline" onclick="scrollToSection('servicos')">Conhecer serviços</button>
         </div>
@@ -118,7 +117,7 @@
               <div class="service-icon">🗣</div>
               <h3 class="service-title">Terapia da Fala</h3>
               <p class="service-text">
-                Avaliação e intervenção em dificuldades de comunicação, linguagem e fala.
+                A Terapia da Fala avalia, previne e intervém em dificuldades de comunicação, linguagem, fala, voz e deglutição. O serviço apoia crianças e adultos, promovendo uma comunicação mais eficaz e segura no dia a dia
               </p>
             </div>
 
@@ -147,7 +146,7 @@
               <div class="service-icon">🧠</div>
               <h3 class="service-title">Psicologia</h3>
               <p class="service-text">
-                Apoio psicológico em momentos de ansiedade, stress e desafios emocionais.
+                O serviço de Psicologia promove o bem‑estar emocional e mental, oferecendo avaliação e acompanhamento em questões como ansiedade, stress, autoestima, relações e desenvolvimento pessoal. O objetivo é apoiar cada pessoa na construção de uma vida mais equilibrada e saudável.
               </p>
             </div>
 
@@ -176,7 +175,7 @@
               <div class="service-icon">🤲</div>
               <h3 class="service-title">Terapia Ocupacional</h3>
               <p class="service-text">
-                Intervenção focada na autonomia no dia a dia.
+                A Terapia Ocupacional ajuda crianças, adultos e idosos a desenvolver autonomia nas atividades do dia a dia, promovendo competências motoras, cognitivas e sociais. O objetivo é melhorar a funcionalidade e a qualidade de vida, adaptando tarefas e ambientes às necessidades de cada pessoa.
               </p>
             </div>
 
@@ -199,63 +198,7 @@
             </div>
           </article>
 
-          <!-- Terapia Ocupacional -->
-          <article class="service-card" data-service="ocupacional">
-            <div class="service-card-inner">
-              <div class="service-icon">🤲</div>
-              <h3 class="service-title">Terapia Ocupacional</h3>
-              <p class="service-text">
-                Intervenção focada na autonomia no dia a dia.
-              </p>
-            </div>
 
-            <div class="service-expanded">
-              <button class="service-close">&times;</button>
-              <h3>Terapia Ocupacional</h3>
-              <p>
-                Promoção da independência funcional.
-              </p>
-              <ul class="service-details">
-                <li>Autonomia nas atividades diárias</li>
-                <li>Integração sensorial</li>
-                <li>Reabilitação física</li>
-                <li>Intervenção pediátrica</li>
-                <li>Adaptação ao contexto escolar</li>
-              </ul>
-              <p>
-                Foco na melhoria da qualidade de vida.
-              </p>
-            </div>
-          </article>
-
-          <!-- Terapia Ocupacional -->
-          <article class="service-card" data-service="ocupacional">
-            <div class="service-card-inner">
-              <div class="service-icon">🤲</div>
-              <h3 class="service-title">Terapia Ocupacional</h3>
-              <p class="service-text">
-                Intervenção focada na autonomia no dia a dia.
-              </p>
-            </div>
-
-            <div class="service-expanded">
-              <button class="service-close">&times;</button>
-              <h3>Terapia Ocupacional</h3>
-              <p>
-                Promoção da independência funcional.
-              </p>
-              <ul class="service-details">
-                <li>Autonomia nas atividades diárias</li>
-                <li>Integração sensorial</li>
-                <li>Reabilitação física</li>
-                <li>Intervenção pediátrica</li>
-                <li>Adaptação ao contexto escolar</li>
-              </ul>
-              <p>
-                Foco na melhoria da qualidade de vida.
-              </p>
-            </div>
-          </article>
 
         </div>
       </div>
@@ -825,7 +768,7 @@
 <script>
   AOS.init({
     duration: 1000,
-    once: true
+
   });
 </script>
 
