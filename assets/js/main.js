@@ -119,12 +119,12 @@ cards.forEach(card => {
     // ABRIR
     card.addEventListener("click", (e) => {
 
-        // evitar conflito com clique no X
         if (e.target.closest(".service-close")) return;
 
         activeExpanded = expanded;
         originRect = card.getBoundingClientRect();
 
+        // posição inicial (igual ao card)
         expanded.style.top = originRect.top + "px";
         expanded.style.left = originRect.left + "px";
         expanded.style.width = originRect.width + "px";
@@ -132,12 +132,22 @@ cards.forEach(card => {
         expanded.classList.add("active");
         overlay.classList.add("active");
 
+        // força reflow
         expanded.offsetHeight;
 
-        expanded.style.top = "50%";
-        expanded.style.left = "50%";
+        // 👉 centro REAL do ecrã
+        const centerX = window.innerWidth / 2;
+        const centerY = window.innerHeight / 2;
+
+        expanded.style.top = centerY + "px";
+        expanded.style.left = centerX + "px";
+
         expanded.style.transform = "translate(-50%, -50%) scale(1)";
-        expanded.style.width = "500px";
+        if (window.innerWidth <= 768) {
+            expanded.style.width = "90vw";
+        } else {
+            expanded.style.width = "500px";
+        }
     });
 
     // BOTÃO X (FECHAR)
