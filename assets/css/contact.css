@@ -108,6 +108,20 @@
     gap: 0.5rem;
 }
 
+.contact-form label {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 0.3rem;
+}
+
+/* opcional - texto do label (se quiseres usar no futuro) */
+.contact-form label span {
+    font-size: 0.8rem;
+    color: rgba(255,255,255,0.8);
+}
+
+
 /* BOTÃO */
 
 .btn-submit {

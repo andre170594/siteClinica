@@ -3,7 +3,7 @@
 
 
 // Atualiza o ano no footer
-document.getElementById("year").textContent = new Date().getFullYear();
+document.getElementById("year").textContent = new Date().getFullYear().toString();
 
 // Scroll suave para secções
 function scrollToSection(id) {
@@ -34,12 +34,17 @@ const reveals = document.querySelectorAll(".reveal, .reveal-group");
 
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
-        if (!entry.isIntersecting) return;
 
-        entry.target.classList.add("visible");
+        if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+        } else {
+            // Remove para permitir animar novamente
+            entry.target.classList.remove("visible");
+        }
+
     });
 }, {
-    threshold: 0.2
+    threshold: 0.3
 });
 
 reveals.forEach(el => observer.observe(el));

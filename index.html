@@ -56,7 +56,7 @@
           <a href="#servicos">Serviços</a>
           <a href="#equipa">Equipa</a>
           <a href="#galeria">Galeria</a>
-          <a href="#contacto">Contacto</a>
+          <a href="#contactos">Contacto</a>
         </div>
         <div class="nav-cta">
           <button class="btn btn-outline2" id="btn_face" onclick="scrollToSection('equipa')">
@@ -110,9 +110,6 @@
         <button class="btn btn-outline" onclick="scrollToSection('servicos')">Ver Serviços</button>
       </div>
     </section>
-
-
-    <!-- Serviços -->
     <section id="servicos" class="services fade-section fade-up services reveal reveal-up">
       <div class="container">
         <div class="section-header">
@@ -220,21 +217,18 @@
       <div class="services-overlay"></div>
     </section>
 
-
-
     <!-- Equipa (Call-to-action) -->
-    <section id="equipaMarker" class="cta">
+    <section id="equipaMarker" class="contact-left reveal reveal-zoom cta">
       <div class="container cta-card">
         <h2>Conheça a nossa equipa</h2>
         <p>Uma Equipa Multifacetada à sua espera .</p>
         <button class="btn btn-outline" onclick="scrollToSection('equipa')">Ver equipa</button>
       </div>
     </section>
-
-    <section id="equipa" class="team fade-section">
+    <section id="equipa" class=" team fade-section">
       <div class="container">
 
-        <div class="section-header">
+        <div class="contact-left reveal reveal-zoom section-header">
           <div class="section-kicker" style="color: #c7ddfa">Equipa</div>
           <h2 class="section-title">
             Profissionais próximos, humanos e especializados.
@@ -244,7 +238,7 @@
         <div class="team-grid">
 
           <!-- CARD -->
-          <article class="team-card">
+          <article class="contact-left reveal reveal-left team-card" style="transition: 1000ms 0s;">
             <img src="assets/icons/equipa/user01.png" alt="Joana Alcaide">
 
             <div class="team-overlay">
@@ -254,7 +248,7 @@
             </div>
           </article>
 
-          <article class="team-card">
+          <article class="contact-left reveal reveal-right team-card" style="transition: 1000ms 0s;">
             <img src="assets/icons/equipa/user02.png" alt="Pamela Domingues">
 
             <div class="team-overlay">
@@ -264,7 +258,7 @@
             </div>
           </article>
 
-          <article class="team-card">
+          <article class="contact-left reveal reveal-left team-card" style="transition: 1000ms 0s;">
             <img src="assets/icons/equipa/user01.png" alt="Nome">
 
             <div class="team-overlay">
@@ -274,7 +268,7 @@
             </div>
           </article>
 
-          <article class="team-card">
+          <article class="contact-left reveal reveal-right team-card" style="transition: 1000ms 0s;">
             <img src="assets/icons/equipa/user02.png" alt="Nome">
 
             <div class="team-overlay">
@@ -288,17 +282,13 @@
       </div>
     </section>
 
-
-
     <!-- galeria (Call-to-action) -->
-    <section id="espacosMarker" class="cta">
+    <section id="espacosMarker" class="contact-left reveal reveal-group cta">
       <div class="container cta-card">
         <h2>Conheça o nosso espaço</h2>
       </div>
     </section>
-
-    <!-- Galeria / Fotos -->
-    <section id="galeria" class="gallery fade-section">
+    <section id="galeria" class="contact-left reveal reveal-left gallery fade-section">
 
       <div class="story-slider" id="storySlider">
 
@@ -321,7 +311,6 @@
 
     </section>
 
-
     <!-- Marque uma consulta (Call-to-action) -->
     <section id="consulta" class="cta">
       <div class="container cta-card">
@@ -330,14 +319,12 @@
         <button class="btn btn-outline" onclick="scrollToSection('contacto')">Marcar consulta</button>
       </div>
     </section>
-
-    <!-- Contacto -->
     <section id="contactos" class="contact fade-section">
       <div class="container">
         <div class="contact-wrapper">
 
           <!-- COLUNA ESQUERDA -->
-          <div class="contact-left">
+          <div class="contact-left reveal reveal-left contact-left">
             <h2>Informações de contacto</h2>
             <p class="contact-subtitle">
               Questões ou esclarecimentos? Entre em contacto connosco!
@@ -369,14 +356,22 @@
           </div>
 
           <!-- COLUNA DIREITA (FORM) -->
-          <div class="contact-form-box">
+          <div class="contact-left reveal reveal-right contact-form-box">
             <h3>Fale Connosco</h3>
 
             <form id="contactForm" class="contact-form">
-              <input type="text" name="nome" placeholder="*Nome" required>
-              <input type="email" name="email" placeholder="*Email" required>
-              <input type="tel" name="telefone" placeholder="Telefone">
-              <textarea name="mensagem" placeholder="Mensagem" required></textarea>
+              <label>
+                <input type="text" name="nome" placeholder="*Nome" required>
+              </label>
+              <label>
+                <input type="email" name="email" placeholder="*Email" required>
+              </label>
+              <label>
+                <input type="tel" name="telefone" placeholder="Telefone">
+              </label>
+              <label>
+                <textarea name="mensagem" placeholder="Mensagem" required></textarea>
+              </label>
 
               <label class="checkbox">
                 <input type="checkbox" required>
@@ -391,17 +386,13 @@
       </div>
     </section>
 
-
     <!-- gps (Call-to-action) -->
-    <section id="gpsMarker" class="cta">
+    <section id="gpsMarker" class="contact-left reveal reveal-zoom cta">
       <div class="container cta-card">
         <h2>Quer saber onde estamos?</h2>
       </div>
     </section>
-
-
-    <!-- Mapa da localização -->
-    <section id="mapa" class="map-fullwidth">
+    <section id="mapa" class="contact-left reveal reveal-zoom map-fullwidth">
       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1087.5277715460975!2d-8.736759359309618!3d40.42828217897027!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd23b0d845c71865%3A0x192bfa407a3bb3d0!2sC%C3%A2mara%20Municipal%20de%20Mira!5e0!3m2!1spt-PT!2spt!4v1774142120082!5m2!1spt-PT!2spt"
               width="100%"
               height="450"
@@ -416,14 +407,14 @@
 
   <!-- Marque uma consulta (Call-to-action) -->
   <section id="anteFooter" class="ctaFooter">
-    <div class="container cta-cardFooter">
+    <div class="contact-left reveal reveal-left container cta-cardFooter">
       <h2>Onde Estamos</h2>
       <br>
       <p>Pç da República 2,</p>
       <p>3070-304 Mira</p>
 
     </div>
-    <div class="container cta-cardFooter">
+    <div class="contact-left reveal reveal-right container cta-cardFooter">
       <h2>Contactos</h2>
       <br>
       <p>927 465 938</p>

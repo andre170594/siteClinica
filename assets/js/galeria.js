@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         function showStory(index) {
-            stories.forEach((s, i) => {
+            stories.forEach((s) => {
                 s.classList.remove("active");
             });
             stories[index].classList.add("active");
