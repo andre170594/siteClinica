@@ -1,0 +1,29 @@
+footer {
+    background: rgba(106, 139, 156, 0.83);
+    color: #ffffff;
+    padding: 3rem 1rem; /* altura maior */
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer .footer-inner {
+    max-width: 1200px;
+    width: 100%;
+    font-size: 1rem;
+}
+
+footer span#year {
+    font-weight: 600;
+}
+
+/* Opcional: responsivo */
+@media (max-width: 768px) {
+    footer {
+        padding: 2rem 1rem;
+    }
+    footer .footer-inner {
+        font-size: 0.9rem;
+    }
+}

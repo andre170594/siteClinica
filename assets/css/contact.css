@@ -1,0 +1,141 @@
+/*==============================
+  CONTACTO
+==============================*/
+
+.contact {
+    padding: 4rem 16rem;
+    background: #f3f3f3;
+
+}
+
+.contact-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+/* ======================
+   COLUNA ESQUERDA
+====================== */
+
+.contact-left h2 {
+    color: #0b6e69;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.contact-subtitle {
+    color: #777;
+    margin-bottom: 3rem;
+    line-height: 1.6;
+}
+
+.contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.contact-icon {
+    width: 60px;
+    height: 60px;
+    background: #d8ebe9;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+}
+
+/* ======================
+   FORM BOX
+====================== */
+
+.contact-form-box {
+    background: var(--blue-light);
+    padding: 3rem;
+    border-radius: 15px;
+}
+
+.contact-form-box h3 {
+    color: white;
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+}
+
+/* FORM */
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 0.9rem 1rem;
+    border: 1px solid rgba(255,255,255,0.6);
+    background: rgba(169, 218, 246, 0.83);
+    color: #333;
+    font-size: 0.95rem;
+}
+
+.contact-form textarea {
+    min-height: 100px;
+    resize: none;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: #4c6faf;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: white;
+}
+
+/* CHECKBOX */
+
+.checkbox {
+    font-size: 0.85rem;
+    color: #f5f5f5;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* BOTÃO */
+
+.btn-submit {
+    margin-top: 1rem;
+    background: #0b6e69;
+    color: white;
+    padding: 0.9rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.btn-submit:hover {
+    background: #095955;
+}
+
+/* RESPONSIVO */
+
+@media(max-width: 1024px) {
+    .contact-wrapper {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .contact-form-box {
+        padding: 2rem;
+    }
+
+}

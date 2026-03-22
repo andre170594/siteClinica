@@ -28,24 +28,21 @@ window.addEventListener("load", () => {
 
 // SCROLL REVEAL
 
-const faders = document.querySelectorAll(".fade-section");
+// SCROLL REVEAL PRO
 
-const appearOptions = {
-    threshold: 0.2
-};
+const reveals = document.querySelectorAll(".reveal, .reveal-group");
 
-const appearOnScroll = new IntersectionObserver((entries, observer) => {
+const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (!entry.isIntersecting) return;
 
         entry.target.classList.add("visible");
-        observer.unobserve(entry.target);
     });
-}, appearOptions);
-
-faders.forEach(section => {
-    appearOnScroll.observe(section);
+}, {
+    threshold: 0.2
 });
+
+reveals.forEach(el => observer.observe(el));
 
 
 

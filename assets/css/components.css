@@ -1,0 +1,72 @@
+
+/*==============================
+  BUTTONS
+==============================*/
+.btn {
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    padding: 1rem 4rem;
+    transition: all 0.3s ease;
+    transform: translateY(0);
+}
+
+/* HOVER COM ANIMAÇÃO */
+.btn:hover {
+    opacity: 0.9;
+    transform: translateY(-3px);
+}
+
+/* CLICK FEEDBACK */
+.btn:active {
+    transform: translateY(1px);
+}
+
+
+.btn-outline {
+    background: var(--blue-light);
+    color: var(--white);
+}
+
+.btn-outline:hover {
+    background: var(--blue-light);
+}
+
+
+
+/* BOTÕES REDES SOCIAIS */
+.btn-outline2 {
+    width: 60px;
+    height: 60px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0;
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0);
+
+
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+/* HOVER */
+.btn-outline2:hover {
+    background: var(--blue-main);
+}
+
+/* IMAGENS DENTRO DO BOTÃO */
+.btn-outline2 img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* alinhar o grupo */
+.contact-item {
+    display: flex;
+    gap: 10px;
+}
