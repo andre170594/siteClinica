@@ -1,0 +1,31 @@
+// Menu mobile toggle
+const navToggle = document.querySelector(".nav-toggle");
+const nav = document.querySelector(".nav");
+
+
+navToggle.addEventListener("click", () => {
+    nav.classList.toggle("nav-open");
+
+});
+
+
+// Fecha menu ao clicar em links internos
+nav.querySelectorAll("a[href^='#']").forEach((link) => {
+    link.addEventListener("click", () => {
+        nav.classList.remove("nav-open");
+    });
+});
+
+//
+
+// navbar scroll
+const navbar = document.getElementById("mainNav");
+
+window.addEventListener("scroll", () => {
+    if (window.scrollY > 50) {
+        navbar.classList.add("scrolled");
+    } else {
+        navbar.classList.remove("scrolled");
+    }
+});
+
