@@ -1119,3 +1119,42 @@ footer span#year {
         transform: rotate(360deg);
     }
 }
+
+
+
+/* BOTÕES REDES SOCIAIS */
+.btn-outline2 {
+    width: 60px;
+    height: 60px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0;
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0);
+
+
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+/* HOVER */
+.btn-outline2:hover {
+    background: var(--blue-main);
+}
+
+/* IMAGENS DENTRO DO BOTÃO */
+.btn-outline2 img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* alinhar o grupo */
+.contact-item {
+    display: flex;
+    gap: 10px;
+}
