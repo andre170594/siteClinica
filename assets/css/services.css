@@ -157,20 +157,37 @@
 .service-card:hover .service-details li:nth-child(5){ transition-delay: 0.25s; }
 
 /* =========================
-   RESPONSIVO
+   MOBILE CLICK MODE
 ========================= */
 
-@media(max-width:768px){
+@media (max-width:768px){
 
-    .services {
-        padding: 4rem 1rem;
+    .service-card.active .service-expanded {
+        opacity: 1;
+        visibility: visible;
+        transform: scale(1);
     }
 
-    .service-card-inner {
-        padding: 2rem 1.5rem;
+    .service-card.active .service-card-inner {
+        opacity: 0;
+        transform: scale(0.95);
     }
 
-    .service-expanded {
-        padding: 1.5rem;
+    /* garantir clique fora */
+    .services-overlay {
+        position: fixed;
+        inset: 0;
+        background: rgba(0,0,0,0.3);
+
+        opacity: 0;
+        visibility: hidden;
+        transition: 0.3s;
+
+        z-index: 5;
+    }
+
+    .services-overlay.active {
+        opacity: 1;
+        visibility: visible;
     }
 }
