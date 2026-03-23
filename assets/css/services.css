@@ -6,9 +6,6 @@
     padding: 6rem 12rem;
     background: linear-gradient(135deg, #e6f4fb, #f4f9fc);
     position: relative;
-
-    /* ⚠️ IMPORTANTE */
-    overflow: visible; /* evita cortar animação */
 }
 
 .services-grid {
@@ -26,7 +23,9 @@
     position: relative;
     border-radius: 20px;
     cursor: pointer;
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    overflow: hidden; /* 🔥 importante para o overlay */
+    padding: 1.5rem;
+    background: linear-gradient(135deg, #d0f5ff, #b7dff6);
 }
 
 .service-card-inner {
@@ -37,12 +36,12 @@
     border-radius: 20px;
     text-align: center;
     box-shadow: 0 15px 40px rgba(0,0,0,0.08);
-    transition: 0.4s ease;
+    transition: all 0.3s ease;
 }
 
 .service-card:hover .service-card-inner {
-    transform: translateY(-10px);
-    box-shadow: 0 25px 60px rgba(0,0,0,0.12);
+    opacity: 0;
+    transform: scale(0.95);
 }
 
 /* ICON */
@@ -78,61 +77,38 @@
 }
 
 /* =========================
-   OVERLAY (BLUR FUNDO)
-========================= */
-
-.services-overlay {
-    position: fixed;
-    inset: 0;
-    background: rgba(0,0,0,0.35);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-
-    opacity: 0;
-    visibility: hidden;
-
-    transition: 0.4s ease;
-    z-index: 998;
-}
-
-.services-overlay.active {
-    opacity: 1;
-    visibility: visible;
-}
-
-/* =========================
-   EXPANDED CARD
+   EXPANDED (HOVER)
 ========================= */
 
 .service-expanded {
-    position: fixed; /* 🔥 garante centro no ecrã */
+    position: absolute;
+    inset: 0;
 
-    top: 0;
-    left: 0;
+    background: rgba(255,255,255,0.97);
+    backdrop-filter: blur(10px);
 
-    width: 320px;
-    max-width: 90vw;
+    padding: 2rem;
+    border-radius: 20px;
 
-    background: rgba(255,255,255,0.95);
-    backdrop-filter: blur(20px);
-
-    padding: 3rem;
-    border-radius: 24px;
-
-    box-shadow: 0 40px 100px rgba(0,0,0,0.25);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
     opacity: 0;
     visibility: hidden;
 
-    transform: translate(0,0) scale(0.95);
-    transition: all 0.4s ease;
+    transform: scale(0.95);
+    transition: all 1s ease;
 
-    z-index: 999;
+    z-index: 2;
+    border-color: #b7dff6;
+    border-style: solid ;
 }
 
-.service-expanded.active {
+.service-card:hover .service-expanded {
     opacity: 1;
     visibility: visible;
+    transform: scale(1);
 }
 
 /* conteúdo */
@@ -149,7 +125,7 @@
 }
 
 /* =========================
-   BULLETS STAGGER
+   BULLETS
 ========================= */
 
 .service-details {
@@ -160,42 +136,25 @@
 
 .service-details li {
     opacity: 0;
-    transform: translateY(15px);
+    transform: translateY(10px);
     margin-bottom: 0.6rem;
-    transition: all 0.4s ease;
+    transition: all 0.3s ease;
 }
 
-.service-expanded.active .service-details li {
+/* animação ao hover */
+
+.service-card:hover .service-details li {
     opacity: 1;
     transform: translateY(0);
 }
 
 /* stagger */
-.service-expanded.active .service-details li:nth-child(1){ transition-delay: 0.1s; }
-.service-expanded.active .service-details li:nth-child(2){ transition-delay: 0.2s; }
-.service-expanded.active .service-details li:nth-child(3){ transition-delay: 0.3s; }
-.service-expanded.active .service-details li:nth-child(4){ transition-delay: 0.4s; }
-.service-expanded.active .service-details li:nth-child(5){ transition-delay: 0.5s; }
 
-/* =========================
-   CLOSE BUTTON
-========================= */
-
-.service-close {
-    position: absolute;
-    top: 20px;
-    right: 25px;
-    font-size: 1.8rem;
-    background: none;
-    border: none;
-    cursor: pointer;
-    color: #0b6e69;
-    transition: 0.3s ease;
-}
-
-.service-close:hover {
-    transform: rotate(90deg);
-}
+.service-card:hover .service-details li:nth-child(1){ transition-delay: 0.05s; }
+.service-card:hover .service-details li:nth-child(2){ transition-delay: 0.1s; }
+.service-card:hover .service-details li:nth-child(3){ transition-delay: 0.15s; }
+.service-card:hover .service-details li:nth-child(4){ transition-delay: 0.2s; }
+.service-card:hover .service-details li:nth-child(5){ transition-delay: 0.25s; }
 
 /* =========================
    RESPONSIVO
@@ -207,16 +166,11 @@
         padding: 4rem 1rem;
     }
 
-    .service-expanded {
-        top: 50% !important;
-        left: 50% !important;
-        transform: translate(-50%, -50%) scale(1) !important;
-
-        max-height: 80vh;
-        overflow-y: auto;
-    }
-
     .service-card-inner {
         padding: 2rem 1.5rem;
+    }
+
+    .service-expanded {
+        padding: 1.5rem;
     }
 }
