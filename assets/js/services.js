@@ -2,55 +2,60 @@
 // SERVICES - HOVER (desktop) + CLICK (mobile)
 // ================================
 
-const cards = document.querySelectorAll(".service-card");
-const overlay = document.querySelector(".services-overlay");
+(() => {
+    const cards = document.querySelectorAll(".service-card");
+    const overlay = document.querySelector(".services-overlay");
 
-let activeCard = null;
+    let activeCard = null;
 
-cards.forEach(card => {
+    function isMobile() {
+        return window.innerWidth <= 768;
+    }
 
-    card.addEventListener("click", (e) => {
+    function closeAll() {
+        cards.forEach((card) => card.classList.remove("active"));
 
-        // só mobile
-        if (window.innerWidth > 768) return;
-
-        // se já existir um card aberto, qualquer toque apenas fecha
-        if (activeCard) {
-            closeAll();
-            return;
-        }
-
-        card.classList.add("active");
         if (overlay) {
-            overlay.classList.add("active");
+            overlay.classList.remove("active");
         }
-        activeCard = card;
+
+        activeCard = null;
+    }
+
+    cards.forEach((card) => {
+        card.addEventListener("click", () => {
+            if (!isMobile()) return;
+
+            // If any card is open, the current tap only closes it.
+            if (activeCard) {
+                closeAll();
+                return;
+            }
+
+            card.classList.add("active");
+
+            if (overlay) {
+                overlay.classList.add("active");
+            }
+
+            activeCard = card;
+        });
     });
 
-});
-
-// fechar ao clicar fora
-if (overlay) {
-    overlay.addEventListener("click", closeAll);
-}
-
-document.addEventListener("click", (event) => {
-    if (window.innerWidth > 768 || !activeCard) return;
-    if (event.target.closest(".service-card")) return;
-
-    closeAll();
-});
-
-window.addEventListener("resize", () => {
-    if (window.innerWidth > 768) {
-        closeAll();
-    }
-});
-
-function closeAll() {
-    cards.forEach(c => c.classList.remove("active"));
     if (overlay) {
-        overlay.classList.remove("active");
+        overlay.addEventListener("click", closeAll);
     }
-    activeCard = null;
-}
+
+    document.addEventListener("click", (event) => {
+        if (!isMobile() || !activeCard) return;
+        if (event.target.closest(".service-card")) return;
+
+        closeAll();
+    });
+
+    window.addEventListener("resize", () => {
+        if (!isMobile()) {
+            closeAll();
+        }
+    });
+})();
