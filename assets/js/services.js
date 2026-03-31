@@ -33,10 +33,20 @@ cards.forEach(card => {
 });
 
 // fechar ao clicar fora
-overlay.addEventListener("click", closeAll);
+if (overlay) {
+    overlay.addEventListener("click", closeAll);
+}
+
+window.addEventListener("resize", () => {
+    if (window.innerWidth > 768) {
+        closeAll();
+    }
+});
 
 function closeAll() {
     cards.forEach(c => c.classList.remove("active"));
-    overlay.classList.remove("active");
+    if (overlay) {
+        overlay.classList.remove("active");
+    }
     activeCard = null;
 }

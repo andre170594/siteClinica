@@ -7,16 +7,18 @@
     cursor: pointer;
     font-weight: 600;
     padding: 1rem 4rem;
-    transition: all 0.3s ease;
+    transition: transform 0.22s ease, box-shadow 0.22s ease, background-color 0.22s ease, opacity 0.22s ease;
     transform: translateY(0);
-    font-family: "cursive", cursive;
+    font-family: var(--font-family), sans-serif;
+    border-radius: 999px;
+    box-shadow: 0 10px 24px rgba(15, 76, 117, 0.12);
 }
 
 /* HOVER COM ANIMAÇÃO */
 .btn:hover {
-    opacity: 0.9;
-    transform: translateY(-3px);
-    border-radius: 25px;
+    opacity: 0.96;
+    transform: translateY(-2px);
+    box-shadow: 0 14px 30px rgba(15, 76, 117, 0.18);
 }
 
 /* CLICK FEEDBACK */
@@ -52,12 +54,14 @@
 
 
     cursor: pointer;
-    transition: 0.3s ease;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+    box-shadow: none;
 }
 
 /* HOVER */
 .btn-outline2:hover {
     background: var(--blue-main);
+    transform: translateY(-2px);
 }
 
 /* IMAGENS DENTRO DO BOTÃO */

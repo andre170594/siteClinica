@@ -45,13 +45,15 @@
 
 .hero-title {
     font-size: 3rem;
-    font-weight: 700;
+    font-weight: 600;
     margin-bottom: 1rem;
     opacity: 0;
     transform: translateY(20px);
-    animation: fadeSlideIn 1s forwards;
-    animation-delay: 0.3s;
-    font-family: "cursive", cursive;
+    animation: fadeSlideIn 0.85s forwards;
+    animation-delay: 0.2s;
+    font-family: var(--font-display), serif;
+    line-height: 1.05;
+    letter-spacing: 0.01em;
 }
 
 .hero-subtitle {
@@ -59,9 +61,9 @@
     margin-bottom: 2rem;
     opacity: 0;
     transform: translateY(20px);
-    animation: fadeSlideIn 1s forwards;
-    animation-delay: 0.6s;
-    font-family: "cursive", cursive;
+    animation: fadeSlideIn 0.85s forwards;
+    animation-delay: 0.35s;
+    font-weight: 500;
 }
 
 .hero-actions {
@@ -71,8 +73,8 @@
     flex-wrap: wrap;
     opacity: 0;
     transform: translateY(20px);
-    animation: fadeSlideIn 1s forwards;
-    animation-delay: 0.9s;
+    animation: fadeSlideIn 0.85s forwards;
+    animation-delay: 0.5s;
 }
 
 @keyframes fadeSlideIn {
