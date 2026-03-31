@@ -1,56 +1,76 @@
 // ================================
-// STORY SLIDER (IGUAL AO INSTAGRAM)
+// STORY SLIDER
 // ================================
 
 document.addEventListener("DOMContentLoaded", () => {
-
     const gallerySection = document.getElementById("galeria");
+    const storyBars = document.getElementById("storyBars");
     let sliderStarted = false;
 
     function startStorySlider() {
-        if (sliderStarted) return;
+        if (sliderStarted || !gallerySection || !storyBars) return;
         sliderStarted = true;
 
         const stories = document.querySelectorAll(".story");
+        if (!stories.length) return;
+
+        storyBars.innerHTML = "";
+        stories.forEach(() => {
+            const bar = document.createElement("div");
+            bar.className = "bar";
+            bar.innerHTML = "<span></span>";
+            storyBars.appendChild(bar);
+        });
+
+        const barItems = storyBars.querySelectorAll(".bar");
+        const barSpans = storyBars.querySelectorAll(".bar span");
         let current = 0;
         let timer;
         let isPaused = false;
         const duration = 5000;
 
-        function resetBars() {
-            stories.forEach(story => {
-                const bar = story.querySelector(".bar span");
-                bar.style.transition = "none";
-                bar.style.width = "0%";
+        function paintBars() {
+            barItems.forEach((bar, index) => {
+                const span = bar.querySelector("span");
+                bar.classList.toggle("is-complete", index < current);
+
+                if (index !== current) {
+                    span.style.transition = "none";
+                    span.style.width = index < current ? "100%" : "0%";
+                }
             });
         }
 
-        function animateBar(story) {
-            const bar = story.querySelector(".bar span");
-            bar.style.transition = `width ${duration}ms linear`;
+        function animateCurrentBar() {
+            const currentBar = barSpans[current];
+            currentBar.style.transition = "none";
+            currentBar.style.width = "0%";
+
             requestAnimationFrame(() => {
-                bar.style.width = "100%";
+                currentBar.style.transition = `width ${duration}ms linear`;
+                currentBar.style.width = "100%";
             });
         }
 
         function showStory(index) {
-            stories.forEach((s) => {
-                s.classList.remove("active");
-            });
+            stories.forEach((story) => story.classList.remove("active"));
             stories[index].classList.add("active");
-            resetBars();
-            animateBar(stories[index]);
-
+            current = index;
+            paintBars();
+            animateCurrentBar();
         }
 
         function nextStory() {
-            current = (current + 1) % stories.length;
-            showStory(current);
+            const nextIndex = (current + 1) % stories.length;
+            showStory(nextIndex);
         }
 
         function startTimer() {
+            clearInterval(timer);
             timer = setInterval(() => {
-                if (!isPaused) nextStory();
+                if (!isPaused) {
+                    nextStory();
+                }
             }, duration);
         }
 
@@ -58,7 +78,7 @@ document.addEventListener("DOMContentLoaded", () => {
             clearInterval(timer);
         }
 
-        stories.forEach(story => {
+        stories.forEach((story) => {
             story.addEventListener("mousedown", () => {
                 isPaused = true;
                 stopTimer();
@@ -81,21 +101,23 @@ document.addEventListener("DOMContentLoaded", () => {
 
             story.addEventListener("click", () => {
                 nextStory();
+                startTimer();
             });
         });
 
-        showStory(current);
+        showStory(0);
         startTimer();
     }
 
-    // Iniciar apenas quando a secção ficar visível
     const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
+        entries.forEach((entry) => {
             if (entry.isIntersecting) {
                 startStorySlider();
             }
         });
     }, { threshold: 0.3 });
 
-    observer.observe(gallerySection);
+    if (gallerySection) {
+        observer.observe(gallerySection);
+    }
 });
