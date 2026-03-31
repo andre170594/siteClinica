@@ -14,16 +14,11 @@ cards.forEach(card => {
         // só mobile
         if (window.innerWidth > 768) return;
 
-        // evitar conflito com botão close
-        if (e.target.closest(".service-close")) return;
-
-        // fechar se já estiver aberto
-        if (activeCard === card) {
+        // se já existir um card aberto, qualquer toque apenas fecha
+        if (activeCard) {
             closeAll();
             return;
         }
-
-        closeAll();
 
         card.classList.add("active");
         if (overlay) {
@@ -38,6 +33,13 @@ cards.forEach(card => {
 if (overlay) {
     overlay.addEventListener("click", closeAll);
 }
+
+document.addEventListener("click", (event) => {
+    if (window.innerWidth > 768 || !activeCard) return;
+    if (event.target.closest(".service-card")) return;
+
+    closeAll();
+});
 
 window.addEventListener("resize", () => {
     if (window.innerWidth > 768) {

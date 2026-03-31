@@ -5,6 +5,7 @@ const teamGrid = document.querySelector('.team-grid');
 let index = 0;
 let interval = null;
 let activeCard = null;
+let lastPointerToggle = 0;
 
 function isMobile() {
     return window.innerWidth <= 768;
@@ -51,7 +52,23 @@ cardsTeam.forEach((card) => {
         activeCard = card;
     };
 
-    card.addEventListener('click', toggleCard);
+    card.addEventListener('pointerup', (event) => {
+        if (!isMobile()) return;
+
+        event.preventDefault();
+        event.stopPropagation();
+        lastPointerToggle = Date.now();
+        toggleCard();
+    });
+
+    card.addEventListener('click', (event) => {
+        if (!isMobile()) return;
+        if (Date.now() - lastPointerToggle < 500) return;
+
+        event.preventDefault();
+        event.stopPropagation();
+        toggleCard();
+    });
 });
 
 /* iniciar */
