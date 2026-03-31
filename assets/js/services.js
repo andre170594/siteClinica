@@ -18,7 +18,7 @@ cards.forEach(card => {
         if (e.target.closest(".service-close")) return;
 
         // fechar se já estiver aberto
-        if (card.classList.contains("active")) {
+        if (activeCard === card) {
             closeAll();
             return;
         }
@@ -26,7 +26,9 @@ cards.forEach(card => {
         closeAll();
 
         card.classList.add("active");
-        overlay.classList.add("active");
+        if (overlay) {
+            overlay.classList.add("active");
+        }
         activeCard = card;
     });
 

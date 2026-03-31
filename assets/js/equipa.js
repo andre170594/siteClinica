@@ -52,10 +52,6 @@ cardsTeam.forEach((card) => {
     };
 
     card.addEventListener('click', toggleCard);
-    card.addEventListener('touchend', (event) => {
-        event.preventDefault();
-        toggleCard();
-    }, { passive: false });
 });
 
 /* iniciar */
