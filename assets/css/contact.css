@@ -33,6 +33,18 @@
     margin-bottom: 2rem;
 }
 
+.contact-link {
+    color: var(--gray-dark);
+    font-weight: 700;
+    transition: color 0.2s ease;
+}
+
+.contact-link:hover,
+.contact-link:focus-visible {
+    color: var(--blue-main);
+    outline: none;
+}
+
 .contact-icon {
     width: 60px;
     height: 60px;

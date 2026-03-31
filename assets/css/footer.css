@@ -18,6 +18,18 @@ footer span#year {
     font-weight: 600;
 }
 
+.footer-link {
+    color: #ffffff;
+    font-weight: 700;
+    transition: opacity 0.2s ease;
+}
+
+.footer-link:hover,
+.footer-link:focus-visible {
+    opacity: 0.82;
+    outline: none;
+}
+
 /* Opcional: responsivo */
 @media (max-width: 768px) {
     footer {

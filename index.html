@@ -5,6 +5,10 @@
   <title>Cl&iacute;nica Bem-Estar</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="Cl&iacute;nica de sa&uacute;de focada no bem-estar, com servi&ccedil;os de Psicologia, Terapia da Fala e Terapia Ocupacional." />
+  <meta name="theme-color" content="#1680a6" />
+  <meta property="og:title" content="Cl&iacute;nica Bem-Estar" />
+  <meta property="og:description" content="Acompanhamento cl&iacute;nico com foco no bem-estar, na proximidade e no cuidado personalizado." />
+  <meta property="og:type" content="website" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -36,7 +40,7 @@
         <div class="nav-overlay"></div>
         <div class="logo">
           <div class="logo-icon">
-            <img src="assets/icons/logos/logo2.png" alt="Logo da Cl&iacute;nica Bem-Estar" />
+            <img src="assets/icons/logos/logo2.png" alt="Logo da Cl&iacute;nica Bem-Estar" decoding="async" />
           </div>
           <div>
             <div class="logo-text-main">Cl&iacute;nica Bem-Estar</div>
@@ -200,7 +204,7 @@
 
         <div class="team-grid">
           <article class="contact-left reveal reveal-left team-card" style="transition: 1000ms 0s;">
-            <img src="assets/icons/equipa/user01.png" alt="Joana Alcaide" />
+            <img src="assets/icons/equipa/user01.png" alt="Joana Alcaide" loading="lazy" decoding="async" />
             <div class="team-overlay">
               <h3>Joana Alcaide</h3>
               <span>Terapeuta da Fala</span>
@@ -209,7 +213,7 @@
           </article>
 
           <article class="contact-left reveal reveal-right team-card" style="transition: 1000ms 0s;">
-            <img src="assets/icons/equipa/user02.png" alt="Profissional da equipa" />
+            <img src="assets/icons/equipa/user02.png" alt="Profissional da equipa" loading="lazy" decoding="async" />
             <div class="team-overlay">
               <h3>Nome da Profissional</h3>
               <span>Psic&oacute;loga</span>
@@ -218,7 +222,7 @@
           </article>
 
           <article class="contact-left reveal reveal-left team-card" style="transition: 1000ms 0s;">
-            <img src="assets/icons/equipa/user01.png" alt="Profissional da equipa" />
+            <img src="assets/icons/equipa/user01.png" alt="Profissional da equipa" loading="lazy" decoding="async" />
             <div class="team-overlay">
               <h3>Nome</h3>
               <span>Terapia Ocupacional</span>
@@ -227,7 +231,7 @@
           </article>
 
           <article class="contact-left reveal reveal-right team-card" style="transition: 1000ms 0s;">
-            <img src="assets/icons/equipa/user02.png" alt="Profissional da equipa" />
+            <img src="assets/icons/equipa/user02.png" alt="Profissional da equipa" loading="lazy" decoding="async" />
             <div class="team-overlay">
               <h3>Nome</h3>
               <span>Especialidade</span>
@@ -249,15 +253,15 @@
         <div class="story-bars" id="storyBars" aria-hidden="true"></div>
 
         <div class="story">
-          <img src="assets/images/hero1.jpg" alt="Espa&ccedil;o da cl&iacute;nica 1">
+          <img src="assets/images/hero1.jpg" alt="Espa&ccedil;o da cl&iacute;nica 1" loading="lazy" decoding="async">
         </div>
 
         <div class="story">
-          <img src="assets/images/hero4.jpg" alt="Espa&ccedil;o da cl&iacute;nica 2">
+          <img src="assets/images/hero4.jpg" alt="Espa&ccedil;o da cl&iacute;nica 2" loading="lazy" decoding="async">
         </div>
 
         <div class="story">
-          <img src="assets/images/hero2.jpg" alt="Espa&ccedil;o da cl&iacute;nica 3">
+          <img src="assets/images/hero2.jpg" alt="Espa&ccedil;o da cl&iacute;nica 3" loading="lazy" decoding="async">
         </div>
       </div>
     </section>
@@ -291,7 +295,7 @@
             <div class="contact-item">
               <div class="contact-icon">Tel</div>
               <div>
-                <p>+351 91 234 56 78</p>
+                <p><a class="contact-link" href="tel:+351912345678">+351 91 234 56 78</a></p>
                 <small>(Chamada para a rede m&oacute;vel nacional)</small>
               </div>
             </div>
@@ -299,7 +303,7 @@
             <div class="contact-item">
               <div class="contact-icon">Email</div>
               <div>
-                <p>geral@clinicabemestar.pt</p>
+                <p><a class="contact-link" href="mailto:geral@clinicabemestar.pt">geral@clinicabemestar.pt</a></p>
               </div>
             </div>
           </div>
@@ -309,13 +313,13 @@
 
             <form id="contactForm" class="contact-form">
               <label>
-                <input type="text" name="nome" placeholder="*Nome" required>
+                <input type="text" name="nome" placeholder="*Nome" autocomplete="name" required>
               </label>
               <label>
-                <input type="email" name="email" placeholder="*Email" required>
+                <input type="email" name="email" placeholder="*Email" autocomplete="email" required>
               </label>
               <label>
-                <input type="tel" name="telefone" placeholder="Telefone">
+                <input type="tel" name="telefone" placeholder="Telefone" autocomplete="tel">
               </label>
               <label>
                 <textarea name="mensagem" placeholder="Mensagem" required></textarea>
@@ -344,6 +348,7 @@
               width="100%"
               height="450"
               style="border:0;"
+              title="Mapa com a localiza&ccedil;&atilde;o da cl&iacute;nica"
               allowfullscreen=""
               loading="lazy"
               referrerpolicy="no-referrer-when-downgrade">
@@ -362,8 +367,8 @@
     <div class="contact-left reveal reveal-right container cta-cardFooter">
       <h2>Contactos</h2>
       <br>
-      <p>927 465 938</p>
-      <p>geral@clinicabemestar.pt</p>
+      <p><a class="footer-link" href="tel:+351927465938">927 465 938</a></p>
+      <p><a class="footer-link" href="mailto:geral@clinicabemestar.pt">geral@clinicabemestar.pt</a></p>
 
       <div class="contact-item" style="margin-top: 10px;">
         <button class="btn btn-outline2" id="btn_facse" onclick="scrollToSection('equipa')" aria-label="Ir para a equipa">
