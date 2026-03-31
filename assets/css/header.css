@@ -1,6 +1,7 @@
 /*==============================
   HEADER & NAVBAR FIXA
 ==============================*/
+
 .nav-cta img {
     width: 4rem;
     height: 4rem;
@@ -18,7 +19,7 @@
 
 .nav-cta {
     display: flex;
-    gap: 8px; /* espaço entre os botões */
+    gap: 8px;
 }
 
 .nav {
@@ -27,40 +28,31 @@
     left: 0;
     width: 100%;
     z-index: 1000;
-
     display: flex;
     align-items: center;
     justify-content: space-between;
-
     padding: 1.5rem 2rem;
     transition: all 0.4s ease;
-
     background: transparent;
 }
 
-/* SCROLL EFFECT */
 .nav.scrolled {
     background: rgba(121, 158, 188, 1);
     padding: 0.9rem 2rem;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
 }
 
-/* LOGO */
-/* LOGO CONTAINER */
 .nav .logo {
     display: flex;
     align-items: center;
     gap: 0.5rem;
 }
 
-/* IMAGEM DO LOGO */
 .logo-icon img {
-    height: 60px; /* controla o tamanho */
+    height: 60px;
     width: auto;
     object-fit: contain;
 }
-
-
 
 .nav .logo-text-main,
 .nav .logo-text-sub {
@@ -73,7 +65,6 @@
     color: var(--blue-main);
 }
 
-/* LINKS DESKTOP */
 .nav-links {
     display: flex;
     align-items: center;
@@ -95,7 +86,6 @@
     color: var(--blue-light);
 }
 
-/* UNDERLINE ANIMATION */
 .nav-links a::after {
     content: "";
     position: absolute;
@@ -111,9 +101,6 @@
     width: 100%;
 }
 
-/*==============================
-  HAMBURGER
-==============================*/
 .nav-toggle {
     display: none;
     flex-direction: column;
@@ -134,46 +121,42 @@
     background: var(--blue-main);
 }
 
-/* ANIMAÇÃO X */
 .nav.nav-open .nav-toggle span:nth-child(1) {
     transform: rotate(45deg) translate(5px, 5px);
 }
+
 .nav.nav-open .nav-toggle span:nth-child(2) {
     opacity: 0;
 }
+
 .nav.nav-open .nav-toggle span:nth-child(3) {
     transform: rotate(-45deg) translate(6px, -6px);
 }
 
-/* ==============================
-   MOBILE
-============================== */
-@media(max-width:768px){
-
+@media(max-width:768px) {
     .nav-toggle {
         display: flex;
+        gap: 0.35rem;
     }
+
     .nav .btn {
         display: none;
     }
+
     .nav-links {
         position: fixed;
         top: 0;
         right: 0;
         height: 100vh;
         width: 260px;
-
         background: white;
-
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         gap: 2rem;
-
         transform: translateX(100%);
         transition: transform 0.4s ease;
-
         z-index: 1000;
     }
 

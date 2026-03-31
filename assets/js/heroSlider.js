@@ -2,6 +2,8 @@
 
 document.addEventListener("DOMContentLoaded", () => {
     const slides = document.querySelectorAll(".hero-slider .slide");
+    if (slides.length <= 1) return;
+
     let current = 0;
     const intervalTime = 5000; // 5s
 

@@ -9,12 +9,14 @@
     padding: 1rem 4rem;
     transition: all 0.3s ease;
     transform: translateY(0);
+    font-family: "cursive", cursive;
 }
 
 /* HOVER COM ANIMAÇÃO */
 .btn:hover {
     opacity: 0.9;
     transform: translateY(-3px);
+    border-radius: 25px;
 }
 
 /* CLICK FEEDBACK */

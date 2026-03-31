@@ -1,10 +1,14 @@
 // equipa
 const cardsTeam = document.querySelectorAll('.team-card');
+const teamGrid = document.querySelector('.team-grid');
 
 let index = 0;
 let interval = null;
 
 function startAutoRotation() {
+    if (!cardsTeam.length) return;
+
+    clearInterval(interval);
     interval = setInterval(() => {
         cardsTeam.forEach(c => c.classList.remove('auto-active'));
 
@@ -20,10 +24,14 @@ function stopAutoRotation() {
 }
 
 /* iniciar */
-startAutoRotation();
+if (cardsTeam.length) {
+    startAutoRotation();
+}
 
 /* parar quando hover */
-document.querySelector('.team-grid').addEventListener('mouseenter', stopAutoRotation);
+if (teamGrid) {
+    teamGrid.addEventListener('mouseenter', stopAutoRotation);
 
-/* voltar quando sai */
-document.querySelector('.team-grid').addEventListener('mouseleave', startAutoRotation);
+    /* voltar quando sai */
+    teamGrid.addEventListener('mouseleave', startAutoRotation);
+}

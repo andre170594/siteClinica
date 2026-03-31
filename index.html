@@ -2,16 +2,10 @@
 <html lang="pt">
 <head>
   <meta charset="UTF-8" />
-  <title>Clínica Bem-Estar</title>
+  <title>Cl&iacute;nica Bem-Estar</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Clínica de saúde focada no bem-estar, com serviços de Psicologia, Terapia da Fala e Terapia Ocupacional." />
+  <meta name="description" content="Cl&iacute;nica de sa&uacute;de focada no bem-estar, com servi&ccedil;os de Psicologia, Terapia da Fala e Terapia Ocupacional." />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-
-  <!-- CSS -->
   <link rel="stylesheet" href="assets/css/base.css">
   <link rel="stylesheet" href="assets/css/header.css">
   <link rel="stylesheet" href="assets/css/hero.css">
@@ -21,51 +15,48 @@
   <link rel="stylesheet" href="assets/css/contact.css">
   <link rel="stylesheet" href="assets/css/footer.css">
   <link rel="stylesheet" href="assets/css/components.css">
-
-
 </head>
 <body>
 
-<!-- LOADER -->
 <div id="site-loader">
   <div class="loader-content">
     <div class="loader-spinner"></div>
-    <p>Clínica Bem-Estar</p>
+    <p>Cl&iacute;nica Bem-Estar</p>
   </div>
 </div>
 
-
-
 <div class="page">
-  <!-- Header -->
   <header>
     <div class="container">
       <nav class="nav" id="mainNav">
         <div class="nav-overlay"></div>
         <div class="logo">
           <div class="logo-icon">
-            <img src="assets/icons/logos/logo2.png" alt="Logo" />
+            <img src="assets/icons/logos/logo2.png" alt="Logo da Cl&iacute;nica Bem-Estar" />
           </div>
           <div>
-            <div class="logo-text-main">Clínica Bem-Estar</div>
+            <div class="logo-text-main">Cl&iacute;nica Bem-Estar</div>
             <div class="logo-text-sub">Cuidar de si, com calma.</div>
           </div>
         </div>
+
         <div class="nav-links">
-          <a href="#inicio">Início</a>
-          <a href="#servicos">Serviços</a>
+          <a href="#inicio">In&iacute;cio</a>
+          <a href="#servicos">Servi&ccedil;os</a>
           <a href="#equipa">Equipa</a>
           <a href="#galeria">Galeria</a>
           <a href="#contactos">Contacto</a>
         </div>
+
         <div class="nav-cta">
-          <button class="btn btn-outline2" id="btn_face" onclick="scrollToSection('equipa')">
-            <img src="assets/icons/face.png" alt="Icone Face" />
+          <button class="btn btn-outline2" id="btn_face" onclick="scrollToSection('equipa')" aria-label="Ir para a equipa">
+            <img src="assets/icons/face.png" alt="Facebook" />
           </button>
-          <button class="btn btn-outline2" id="btn_insta" onclick="scrollToSection('equipa')">
-            <img src="assets/icons/insta.png" alt="Icone Instagram" />
+          <button class="btn btn-outline2" id="btn_insta" onclick="scrollToSection('equipa')" aria-label="Ir para a equipa">
+            <img src="assets/icons/insta.png" alt="Instagram" />
           </button>
         </div>
+
         <button class="nav-toggle" aria-label="Abrir menu">
           <span></span>
           <span></span>
@@ -75,262 +66,219 @@
     </div>
   </header>
 
-  <!-- Main -->
   <main>
-
-    <!-- Hero com Slider -->
     <section id="inicio" class="hero">
       <div class="hero-slider">
         <div class="slide active" style="background-image:url('assets/images/hero4.jpg')"></div>
-        <div class="slide" style="background-image:url('assets/images/hero6.jpg')"></div>
-        <div class="slide" style="background-image:url('assets/images/hero5.jpg')"></div>
       </div>
+
       <div class="hero-content">
         <h1 class="hero-title">
-          Cuidamos da sua saúde<br />
+          Cuidamos da sua sa&uacute;de<br />
           com <span>empatia, calma e profissionalismo.</span>
         </h1>
         <p class="hero-subtitle">
-          Na Clínica Bem-Estar, colocamos o seu bem-estar no centro de tudo o que fazemos.
+          Na Cl&iacute;nica Bem-Estar, colocamos o seu bem-estar no centro de tudo o que fazemos.
         </p>
         <div class="hero-actions">
           <button class="btn btn-outline" onclick="scrollToSection('contactos')">
             <span>Entre em contacto</span>
           </button>
-          <button class="btn btn-outline" onclick="scrollToSection('servicos')">Conhecer serviços</button>
+          <button class="btn btn-outline" onclick="scrollToSection('servicos')">Conhecer servi&ccedil;os</button>
         </div>
       </div>
     </section>
 
-    <!-- Serviços (Call-to-action) -->
     <section id="servicoMarker" class="contact-left reveal reveal-zoom cta">
       <div class="container cta-card">
-        <h2>Consulte os nossos serviços</h2>
-        <p>Varios tipos de serviços ao seu dipor.</p>
-        <button class="btn btn-outline" onclick="scrollToSection('servicos')">Ver Serviços</button>
+        <h2>Consulte os nossos servi&ccedil;os</h2>
+        <p>Diferentes &aacute;reas de acompanhamento adaptadas &agrave;s suas necessidades.</p>
+        <button class="btn btn-outline" onclick="scrollToSection('servicos')">Ver servi&ccedil;os</button>
       </div>
     </section>
-    <section id="servicos" class="services fade-section fade-up services reveal reveal-up">
+
+    <section id="servicos" class="services fade-section fade-up reveal reveal-up">
       <div class="container">
         <div class="section-header">
-          <div class="section-kicker">Serviços</div>
-          <h2 class="section-title">
-            Cuidar de si, em diferentes dimensões da saúde.
-          </h2>
+          <div class="section-kicker">Servi&ccedil;os</div>
+          <h2 class="section-title">Cuidar de si, em diferentes dimens&otilde;es da sa&uacute;de.</h2>
         </div>
 
         <div class="services-grid">
-
-          <!-- Terapia da Fala -->
           <article class="service-card" data-service="fala">
             <div class="service-card-inner">
-              <div class="service-icon">🗣</div>
+              <div class="service-icon">TF</div>
               <h3 class="service-title">Terapia da Fala</h3>
               <p class="service-text">
-                A Terapia da Fala avalia, previne e intervém em dificuldades de comunicação, linguagem, fala, voz e deglutição. O serviço apoia crianças e adultos, promovendo uma comunicação mais eficaz e segura no dia a dia. e mais cenas bla bla bla
+                A Terapia da Fala avalia, previne e interv&eacute;m em dificuldades de comunica&ccedil;&atilde;o, linguagem, fala, voz e degluti&ccedil;&atilde;o. O servi&ccedil;o apoia crian&ccedil;as e adultos, promovendo uma comunica&ccedil;&atilde;o mais eficaz e segura no dia a dia.
               </p>
             </div>
 
             <div class="service-expanded">
               <h3>Terapia da Fala</h3>
-              <p>
-                Intervenção especializada para crianças e adultos.
-              </p>
+              <p>Interven&ccedil;&atilde;o especializada para crian&ccedil;as e adultos.</p>
               <ul class="service-details">
-                <li>Dificuldades de articulação</li>
-                <li>Gaguez e fluência</li>
+                <li>Dificuldades de articula&ccedil;&atilde;o</li>
+                <li>Gaguez e flu&ecirc;ncia</li>
                 <li>Atrasos de linguagem</li>
-                <li>Perturbações da comunicação</li>
-                <li>Reabilitação pós-AVC</li>
+                <li>Perturba&ccedil;&otilde;es da comunica&ccedil;&atilde;o</li>
+                <li>Reabilita&ccedil;&atilde;o p&oacute;s-AVC</li>
               </ul>
-              <p>
-                Plano terapêutico personalizado e centrado na pessoa.
-              </p>
+              <p>Plano terap&ecirc;utico personalizado e centrado na pessoa.</p>
             </div>
           </article>
 
-          <!-- Psicologia -->
           <article class="service-card" data-service="psicologia">
             <div class="service-card-inner">
-              <div class="service-icon">🧠</div>
+              <div class="service-icon">PS</div>
               <h3 class="service-title">Psicologia</h3>
               <p class="service-text">
-                O serviço de Psicologia promove o bem‑estar emocional e mental, oferecendo avaliação e acompanhamento em questões como ansiedade, stress, autoestima, relações e desenvolvimento pessoal. O objetivo é apoiar cada pessoa na construção de uma vida mais equilibrada e saudável.
+                O servi&ccedil;o de Psicologia promove o bem-estar emocional e mental, oferecendo avalia&ccedil;&atilde;o e acompanhamento em quest&otilde;es como ansiedade, stress, autoestima, rela&ccedil;&otilde;es e desenvolvimento pessoal.
               </p>
             </div>
 
             <div class="service-expanded">
               <h3>Psicologia</h3>
-              <p>
-                Acompanhamento emocional individualizado.
-              </p>
+              <p>Acompanhamento emocional individualizado.</p>
               <ul class="service-details">
-                <li>Ansiedade e depressão</li>
-                <li>Gestão de stress</li>
+                <li>Ansiedade e depress&atilde;o</li>
+                <li>Gest&atilde;o de stress</li>
                 <li>Autoestima e desenvolvimento pessoal</li>
                 <li>Apoio em luto</li>
                 <li>Psicologia infantil</li>
               </ul>
-              <p>
-                Espaço seguro, confidencial e empático.
-              </p>
+              <p>Espa&ccedil;o seguro, confidencial e emp&aacute;tico.</p>
             </div>
           </article>
 
-          <!-- Terapia Ocupacional -->
           <article class="service-card" data-service="ocupacional">
             <div class="service-card-inner">
-              <div class="service-icon">🤲</div>
+              <div class="service-icon">TO</div>
               <h3 class="service-title">Terapia Ocupacional</h3>
               <p class="service-text">
-                A Terapia Ocupacional ajuda crianças, adultos e idosos a desenvolver autonomia nas atividades do dia a dia, promovendo competências motoras, cognitivas e sociais. O objetivo é melhorar a funcionalidade e a qualidade de vida, adaptando tarefas e ambientes às necessidades de cada pessoa.
+                A Terapia Ocupacional ajuda crian&ccedil;as, adultos e idosos a desenvolver autonomia nas atividades do dia a dia, promovendo compet&ecirc;ncias motoras, cognitivas e sociais.
               </p>
             </div>
 
             <div class="service-expanded">
-
               <h3>Terapia Ocupacional</h3>
-              <p>
-                Promoção da independência funcional.
-              </p>
+              <p>Promo&ccedil;&atilde;o da independ&ecirc;ncia funcional.</p>
               <ul class="service-details">
-                <li>Autonomia nas atividades diárias</li>
-                <li>Integração sensorial</li>
-                <li>Reabilitação física</li>
-                <li>Intervenção pediátrica</li>
-                <li>Adaptação ao contexto escolar</li>
+                <li>Autonomia nas atividades di&aacute;rias</li>
+                <li>Integra&ccedil;&atilde;o sensorial</li>
+                <li>Reabilita&ccedil;&atilde;o f&iacute;sica</li>
+                <li>Interven&ccedil;&atilde;o pedi&aacute;trica</li>
+                <li>Adapta&ccedil;&atilde;o ao contexto escolar</li>
               </ul>
-              <p>
-                Foco na melhoria da qualidade de vida.
-              </p>
+              <p>Foco na melhoria da qualidade de vida.</p>
             </div>
           </article>
-
-
-
         </div>
       </div>
 
-      <!-- Overlay Global -->
       <div class="services-overlay"></div>
     </section>
 
-    <!-- Equipa (Call-to-action) -->
     <section id="equipaMarker" class="contact-left reveal reveal-zoom cta">
       <div class="container cta-card">
-        <h2>Conheça a nossa equipa</h2>
-        <p>Uma Equipa Multifacetada à sua espera .</p>
+        <h2>Conhe&ccedil;a a nossa equipa</h2>
+        <p>Uma equipa multidisciplinar preparada para o acompanhar.</p>
         <button class="btn btn-outline" onclick="scrollToSection('equipa')">Ver equipa</button>
       </div>
     </section>
-    <section id="equipa" class=" team fade-section">
-      <div class="container">
 
+    <section id="equipa" class="team fade-section">
+      <div class="container">
         <div class="contact-left reveal reveal-zoom section-header">
           <div class="section-kicker" style="color: #c7ddfa">Equipa</div>
-          <h2 class="section-title">
-            Profissionais próximos, humanos e especializados.
-          </h2>
+          <h2 class="section-title">Profissionais pr&oacute;ximos, humanos e especializados.</h2>
         </div>
 
         <div class="team-grid">
-
-          <!-- CARD -->
           <article class="contact-left reveal reveal-left team-card" style="transition: 1000ms 0s;">
-            <img src="assets/icons/equipa/user01.png" alt="Joana Alcaide">
-
+            <img src="assets/icons/equipa/user01.png" alt="Joana Alcaide" />
             <div class="team-overlay">
               <h3>Joana Alcaide</h3>
               <span>Terapeuta da Fala</span>
-              <p>Especialista em perturbações da comunicação e linguagem.</p>
+              <p>Especialista em perturba&ccedil;&otilde;es da comunica&ccedil;&atilde;o e linguagem.</p>
             </div>
           </article>
 
           <article class="contact-left reveal reveal-right team-card" style="transition: 1000ms 0s;">
-            <img src="assets/icons/equipa/user02.png" alt="Pamela Domingues">
-
+            <img src="assets/icons/equipa/user02.png" alt="Profissional da equipa" />
             <div class="team-overlay">
-              <h3>Pamela Domingues</h3>
-              <span>Terapeuta das Viagens</span>
-              <p>Apoio emocional se possível com marcação de um spa!.</p>
+              <h3>Nome da Profissional</h3>
+              <span>Psic&oacute;loga</span>
+              <p>Acompanhamento emocional com foco no equil&iacute;brio e bem-estar.</p>
             </div>
           </article>
 
           <article class="contact-left reveal reveal-left team-card" style="transition: 1000ms 0s;">
-            <img src="assets/icons/equipa/user01.png" alt="Nome">
-
+            <img src="assets/icons/equipa/user01.png" alt="Profissional da equipa" />
             <div class="team-overlay">
               <h3>Nome</h3>
               <span>Terapia Ocupacional</span>
-              <p>Promoção da autonomia e qualidade de vida.</p>
+              <p>Promo&ccedil;&atilde;o da autonomia e qualidade de vida.</p>
             </div>
           </article>
 
           <article class="contact-left reveal reveal-right team-card" style="transition: 1000ms 0s;">
-            <img src="assets/icons/equipa/user02.png" alt="Nome">
-
+            <img src="assets/icons/equipa/user02.png" alt="Profissional da equipa" />
             <div class="team-overlay">
               <h3>Nome</h3>
               <span>Especialidade</span>
-              <p>Descrição breve da especialidade.</p>
+              <p>Descri&ccedil;&atilde;o breve da especialidade.</p>
             </div>
           </article>
-
         </div>
       </div>
     </section>
 
-    <!-- galeria (Call-to-action) -->
     <section id="espacosMarker" class="contact-left reveal reveal-zoom cta">
       <div class="container cta-card">
-        <h2>Conheça o nosso espaço</h2>
+        <h2>Conhe&ccedil;a o nosso espa&ccedil;o</h2>
       </div>
     </section>
+
     <section id="galeria" class="contact-left reveal reveal-left gallery fade-section">
-
       <div class="story-slider" id="storySlider">
-
         <div class="story">
           <div class="story-bars"><div class="bar"><span></span></div></div>
-          <img src="assets/images/hero1.jpg" alt="teste1">
+          <img src="assets/images/hero1.jpg" alt="Espa&ccedil;o da cl&iacute;nica 1">
         </div>
 
         <div class="story">
           <div class="story-bars"><div class="bar"><span></span></div></div>
-          <img src="assets/images/hero4.jpg" alt="teste2">
+          <img src="assets/images/hero4.jpg" alt="Espa&ccedil;o da cl&iacute;nica 2">
         </div>
 
         <div class="story">
           <div class="story-bars"><div class="bar"><span></span></div></div>
-          <img src="assets/images/hero2.jpg" alt="teste33">
+          <img src="assets/images/hero2.jpg" alt="Espa&ccedil;o da cl&iacute;nica 3">
         </div>
-
       </div>
-
     </section>
 
-    <!-- Marque uma consulta (Call-to-action) -->
     <section id="consulta" class="contact-left reveal reveal-zoom cta">
       <div class="container cta-card">
-        <h2>Marque já a sua consulta</h2>
+        <h2>Marque j&aacute; a sua consulta</h2>
         <p>Entre em contacto connosco e agende o seu atendimento personalizado.</p>
-        <button class="btn btn-outline" onclick="scrollToSection('contacto')">Marcar consulta</button>
+        <button class="btn btn-outline" onclick="scrollToSection('contactos')">Marcar consulta</button>
       </div>
     </section>
+
     <section id="contactos" class="contact fade-section">
       <div class="container">
         <div class="contact-wrapper">
-
-          <!-- COLUNA ESQUERDA -->
-          <div class="contact-left reveal reveal-left contact-left">
-            <h2>Informações de contacto</h2>
+          <div class="contact-left reveal reveal-left">
+            <h2>Informa&ccedil;&otilde;es de contacto</h2>
             <p class="contact-subtitle">
-              Questões ou esclarecimentos? Entre em contacto connosco!
-              Estamos disponíveis para ajudar!
+              Quest&otilde;es ou esclarecimentos? Entre em contacto connosco.
+              Estamos dispon&iacute;veis para ajudar.
             </p>
 
             <div class="contact-item">
-              <div class="contact-icon">📍</div>
+              <div class="contact-icon">Morada</div>
               <div>
                 <p>Rua do Bem-Estar, 123</p>
                 <p>3000-000 Coimbra</p>
@@ -338,22 +286,21 @@
             </div>
 
             <div class="contact-item">
-              <div class="contact-icon">📞</div>
+              <div class="contact-icon">Tel</div>
               <div>
                 <p>+351 91 234 56 78</p>
-                <small>(Chamada para a rede móvel nacional)</small>
+                <small>(Chamada para a rede m&oacute;vel nacional)</small>
               </div>
             </div>
 
             <div class="contact-item">
-              <div class="contact-icon">✉️</div>
+              <div class="contact-icon">Email</div>
               <div>
                 <p>geral@clinicabemestar.pt</p>
               </div>
             </div>
           </div>
 
-          <!-- COLUNA DIREITA (FORM) -->
           <div class="contact-left reveal reveal-right contact-form-box">
             <h3>Fale Connosco</h3>
 
@@ -373,23 +320,22 @@
 
               <label class="checkbox">
                 <input type="checkbox" required>
-                Li e concordo com a Política de Privacidade
+                Li e concordo com a Pol&iacute;tica de Privacidade
               </label>
 
               <button type="submit" class="btn-submit">Submeter</button>
             </form>
           </div>
-
         </div>
       </div>
     </section>
 
-    <!-- gps (Call-to-action) -->
     <section id="gpsMarker" class="contact-left reveal reveal-zoom cta">
       <div class="container cta-card">
         <h2>Quer saber onde estamos?</h2>
       </div>
     </section>
+
     <section id="mapa" class="contact-left reveal reveal-zoom map-fullwidth">
       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1087.5277715460975!2d-8.736759359309618!3d40.42828217897027!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd23b0d845c71865%3A0x192bfa407a3bb3d0!2sC%C3%A2mara%20Municipal%20de%20Mira!5e0!3m2!1spt-PT!2spt!4v1774142120082!5m2!1spt-PT!2spt"
               width="100%"
@@ -400,48 +346,41 @@
               referrerpolicy="no-referrer-when-downgrade">
       </iframe>
     </section>
-
   </main>
 
-  <!-- Marque uma consulta (Call-to-action) -->
   <section id="anteFooter" class="ctaFooter">
     <div class="contact-left reveal reveal-left container cta-cardFooter">
       <h2>Onde Estamos</h2>
       <br>
-      <p>Pç da República 2,</p>
+      <p>P&ccedil; da Rep&uacute;blica 2,</p>
       <p>3070-304 Mira</p>
-
     </div>
+
     <div class="contact-left reveal reveal-right container cta-cardFooter">
       <h2>Contactos</h2>
       <br>
       <p>927 465 938</p>
-      <p>geral@encantoclinica.pt</p>
+      <p>geral@clinicabemestar.pt</p>
 
       <div class="contact-item" style="margin-top: 10px;">
-        <button class="btn btn-outline2" id="btn_facse" onclick="scrollToSection('equipa')">
-          <img src="assets/icons/face.png" alt="Icone Face" />
+        <button class="btn btn-outline2" id="btn_facse" onclick="scrollToSection('equipa')" aria-label="Ir para a equipa">
+          <img src="assets/icons/face.png" alt="Facebook" />
         </button>
-        <button class="btn btn-outline2" id="btn_facesa" onclick="scrollToSection('equipa')">
-          <img src="assets/icons/insta.png" alt="Icone Face" />
+        <button class="btn btn-outline2" id="btn_facesa" onclick="scrollToSection('equipa')" aria-label="Ir para a equipa">
+          <img src="assets/icons/insta.png" alt="Instagram" />
         </button>
-        <button class="btn btn-outline2" id="btn_faces" onclick="scrollToSection('equipa')">
-          <img src="assets/icons/face.png" alt="Icone Face" />
+        <button class="btn btn-outline2" id="btn_faces" onclick="scrollToSection('equipa')" aria-label="Ir para a equipa">
+          <img src="assets/icons/face.png" alt="Facebook" />
         </button>
       </div>
-
-
     </div>
-
   </section>
 
-  <!-- Footer -->
   <footer>
     <div class="container footer-inner">
-      <div>© <span id="year"></span> Clínica Bem-Estar. Todos os direitos reservados.</div>
+      <div>&copy; <span id="year"></span> Cl&iacute;nica Bem-Estar. Todos os direitos reservados.</div>
     </div>
   </footer>
-
 </div>
 
 <script src="assets/js/main.js"></script>
@@ -452,8 +391,6 @@
 <script src="assets/js/navbar.js"></script>
 <script src="assets/js/form.js"></script>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
-
 
 </body>
 </html>

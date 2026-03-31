@@ -2,17 +2,11 @@ html {
     scroll-behavior: smooth;
 }
 
-/* ======================
-   SCROLL ANIMATION PRO
-====================== */
-
-/* BASE (estado inicial) */
 .reveal {
     opacity: 0;
     transition: all 2s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-/* VARIAÇÕES */
 .reveal-up {
     transform: translateY(60px) scale(0.98);
     filter: blur(6px);
@@ -21,7 +15,6 @@ html {
 .reveal-left {
     transform: translateX(-80px);
     filter: blur(4px);
-
 }
 
 .reveal-right {
@@ -34,16 +27,11 @@ html {
     filter: blur(6px);
 }
 
-/* QUANDO VISÍVEL */
 .reveal.visible {
     opacity: 1;
-    transform: translate(0,0) scale(1);
+    transform: translate(0, 0) scale(1);
     filter: blur(0);
 }
-
-/* ======================
-   STAGGER (efeito premium)
-====================== */
 
 .reveal-group > * {
     opacity: 0;
@@ -54,22 +42,22 @@ html {
     animation: fadeUp 1s ease forwards;
 }
 
-.reveal-group.visible > *:nth-child(1){ animation-delay: 0.1s; }
-.reveal-group.visible > *:nth-child(2){ animation-delay: 0.2s; }
-.reveal-group.visible > *:nth-child(3){ animation-delay: 0.3s; }
-.reveal-group.visible > *:nth-child(4){ animation-delay: 0.4s; }
+.reveal-group.visible > *:nth-child(1) { animation-delay: 0.1s; }
+.reveal-group.visible > *:nth-child(2) { animation-delay: 0.2s; }
+.reveal-group.visible > *:nth-child(3) { animation-delay: 0.3s; }
+.reveal-group.visible > *:nth-child(4) { animation-delay: 0.4s; }
 
 @keyframes fadeUp {
     from {
         opacity: 0;
         transform: translateY(25px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
     }
 }
-/* DIREÇÕES DIFERENTES */
 
 .fade-left {
     transform: translateX(-80px);
@@ -87,35 +75,13 @@ html {
     transform: scale(0.9);
 }
 
-/* quando aparece */
-
 .fade-section.visible.fade-left,
 .fade-section.visible.fade-right,
 .fade-section.visible.fade-up,
 .fade-section.visible.fade-zoom {
-    transform: translate(0,0) scale(1);
+    transform: translate(0, 0) scale(1);
 }
 
-
-/* ======================
-   MOBILE OTIMIZAÇÃO
-====================== */
-
-@media (max-width: 768px) {
-    .reveal-left,
-    .reveal-right {
-        transform: translateY(40px); /* evita movimentos laterais estranhos */
-    }
-
-    .reveal {
-        filter: blur(2px);
-    }
-}
-
-
-/*==============================
-  BASE
-==============================*/
 :root {
     --blue-main: #1f6fb2;
     --blue-light: #1680a6;
@@ -127,7 +93,7 @@ html {
     --radius-lg: 1rem;
     --radius-pill: 2rem;
     --transition-fast: 0.3s;
-    --font-family: 'Nunito', sans-serif;
+    --font-family: "Nunito", sans-serif;
 }
 
 * {
@@ -153,10 +119,11 @@ img {
     display: block;
 }
 
+html,
+body {
+    overflow-x: hidden;
+}
 
-/*==============================
-  SECTIONS GENERICAS
-==============================*/
 .section-header {
     max-width: 700px;
     margin: 0 auto 3rem auto;
@@ -184,11 +151,6 @@ img {
     color: #555;
     line-height: 1.6;
 }
-
-
-/*==============================
-  CARDS DIVS CTA
-==============================*/
 
 .cta {
     padding: 4rem 1rem;
@@ -226,11 +188,6 @@ img {
     flex-direction: column;
     margin: 4rem auto;
 }
-
-
-/* ======================
-   SITE LOADER
-====================== */
 
 #site-loader {
     position: fixed;
@@ -271,5 +228,36 @@ img {
 @keyframes spin {
     to {
         transform: rotate(360deg);
+    }
+}
+
+@media (max-width: 1200px) {
+    .ctaFooter {
+        padding: 4rem 3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .reveal-left,
+    .reveal-right {
+        transform: translateY(40px);
+    }
+
+    .reveal {
+        filter: blur(2px);
+    }
+
+    .cta {
+        padding: 3rem 1rem;
+    }
+
+    .ctaFooter {
+        padding: 3rem 1rem;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .cta-cardFooter {
+        margin: 0;
     }
 }

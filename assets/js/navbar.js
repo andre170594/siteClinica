@@ -3,18 +3,21 @@ const navToggle = document.querySelector(".nav-toggle");
 const nav = document.querySelector(".nav");
 
 
-navToggle.addEventListener("click", () => {
-    nav.classList.toggle("nav-open");
-
-});
+if (navToggle && nav) {
+    navToggle.addEventListener("click", () => {
+        nav.classList.toggle("nav-open");
+    });
+}
 
 
 // Fecha menu ao clicar em links internos
-nav.querySelectorAll("a[href^='#']").forEach((link) => {
-    link.addEventListener("click", () => {
-        nav.classList.remove("nav-open");
+if (nav) {
+    nav.querySelectorAll("a[href^='#']").forEach((link) => {
+        link.addEventListener("click", () => {
+            nav.classList.remove("nav-open");
+        });
     });
-});
+}
 
 //
 
@@ -22,6 +25,8 @@ nav.querySelectorAll("a[href^='#']").forEach((link) => {
 const navbar = document.getElementById("mainNav");
 
 window.addEventListener("scroll", () => {
+    if (!navbar) return;
+
     if (window.scrollY > 50) {
         navbar.classList.add("scrolled");
     } else {

@@ -1,9 +1,16 @@
 // assets/js/main.js
 
+// pag no topo after refresh
+window.onbeforeunload = function () {
+    window.scrollTo(0, 0);
+};
 
 
 // Atualiza o ano no footer
-document.getElementById("year").textContent = new Date().getFullYear().toString();
+const yearElement = document.getElementById("year");
+if (yearElement) {
+    yearElement.textContent = new Date().getFullYear().toString();
+}
 
 // Scroll suave para secções
 function scrollToSection(id) {

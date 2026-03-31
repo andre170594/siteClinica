@@ -5,7 +5,6 @@
 .contact {
     padding: 4rem 16rem;
     background: #f3f3f3;
-
 }
 
 .contact-wrapper {
@@ -14,10 +13,6 @@
     gap: 4rem;
     align-items: center;
 }
-
-/* ======================
-   COLUNA ESQUERDA
-====================== */
 
 .contact-left h2 {
     color: #0b6e69;
@@ -49,10 +44,6 @@
     font-size: 1.5rem;
 }
 
-/* ======================
-   FORM BOX
-====================== */
-
 .contact-form-box {
     background: var(--blue-light);
     padding: 3rem;
@@ -65,8 +56,6 @@
     font-size: 1.5rem;
 }
 
-/* FORM */
-
 .contact-form {
     display: flex;
     flex-direction: column;
@@ -76,7 +65,7 @@
 .contact-form input,
 .contact-form textarea {
     padding: 0.9rem 1rem;
-    border: 1px solid rgba(255,255,255,0.6);
+    border: 1px solid rgba(255, 255, 255, 0.6);
     background: rgba(169, 218, 246, 0.83);
     color: #333;
     font-size: 0.95rem;
@@ -98,8 +87,6 @@
     border-color: white;
 }
 
-/* CHECKBOX */
-
 .checkbox {
     font-size: 0.85rem;
     color: #f5f5f5;
@@ -115,14 +102,10 @@
     gap: 0.3rem;
 }
 
-/* opcional - texto do label (se quiseres usar no futuro) */
 .contact-form label span {
     font-size: 0.8rem;
-    color: rgba(255,255,255,0.8);
+    color: rgba(255, 255, 255, 0.8);
 }
-
-
-/* BOTÃO */
 
 .btn-submit {
     margin-top: 1rem;
@@ -140,9 +123,17 @@
     background: #095955;
 }
 
-/* RESPONSIVO */
+@media(max-width: 1200px) {
+    .contact {
+        padding: 4rem 3rem;
+    }
+}
 
 @media(max-width: 1024px) {
+    .contact {
+        padding: 4rem 2rem;
+    }
+
     .contact-wrapper {
         grid-template-columns: 1fr;
         gap: 1rem;
@@ -151,5 +142,18 @@
     .contact-form-box {
         padding: 2rem;
     }
+}
 
+@media(max-width: 768px) {
+    .contact {
+        padding: 3rem 1rem;
+    }
+
+    .contact-icon {
+        width: auto;
+        min-width: 60px;
+        padding: 0 0.75rem;
+        font-size: 0.95rem;
+        font-weight: 700;
+    }
 }
