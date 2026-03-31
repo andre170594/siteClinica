@@ -114,14 +114,18 @@
     padding: 0;
     border: none;
     background: transparent;
+    appearance: none;
+    -webkit-appearance: none;
 }
 
 .nav-toggle span {
+    display: block;
     width: 24px;
     height: 3px;
     border-radius: 999px;
     background: white;
     transition: transform 0.25s ease, opacity 0.2s ease, background-color 0.2s ease;
+    transform-origin: center;
 }
 
 .nav.scrolled .nav-toggle span {

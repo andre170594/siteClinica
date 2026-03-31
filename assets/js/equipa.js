@@ -38,7 +38,7 @@ function closeActiveCard() {
 }
 
 cardsTeam.forEach((card) => {
-    card.addEventListener('click', () => {
+    const toggleCard = () => {
         if (!isMobile()) return;
 
         if (activeCard === card) {
@@ -49,7 +49,13 @@ cardsTeam.forEach((card) => {
         closeActiveCard();
         card.classList.add('active');
         activeCard = card;
-    });
+    };
+
+    card.addEventListener('click', toggleCard);
+    card.addEventListener('touchend', (event) => {
+        event.preventDefault();
+        toggleCard();
+    }, { passive: false });
 });
 
 /* iniciar */
@@ -77,4 +83,11 @@ window.addEventListener('resize', () => {
     }
 
     stopAutoRotation();
+});
+
+document.addEventListener('click', (event) => {
+    if (!isMobile() || !activeCard) return;
+    if (event.target.closest('.team-card')) return;
+
+    closeActiveCard();
 });

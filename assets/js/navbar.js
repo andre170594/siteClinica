@@ -19,6 +19,12 @@ if (nav) {
     });
 }
 
+window.addEventListener("resize", () => {
+    if (window.innerWidth > 768 && nav) {
+        nav.classList.remove("nav-open");
+    }
+});
+
 //
 
 // navbar scroll

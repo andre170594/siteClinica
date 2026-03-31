@@ -29,11 +29,6 @@ EQUIPA NOVA
     transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-.team-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
-}
-
 /* IMAGEM */
 .team-card img {
     width: 100%;
@@ -89,19 +84,22 @@ EQUIPA NOVA
 HOVER (UTILIZADOR)
 ========================= */
 
-.team-card:hover img {
-    transform: scale(1.02);
-    filter: blur(2px) brightness(0.7);
-}
+@media (hover: hover) and (pointer: fine) {
+    .team-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+    }
 
-.team-card:hover .team-overlay {
-    opacity: 1;
-    transform: translateY(0);
-}
+    .team-card:hover img {
+        transform: scale(1.02);
+        filter: blur(2px) brightness(0.7);
+    }
 
-/* =========================
-AUTO HOVER (JS)
-========================= */
+    .team-card:hover .team-overlay {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
 .team-card.auto-active img {
     transform: scale(1.02);
