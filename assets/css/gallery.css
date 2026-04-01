@@ -76,9 +76,9 @@
 .story-image-blur {
     position: absolute;
     inset: -6%;
-    filter: blur(22px) saturate(1.05);
-    transform: scale(1.08);
-    opacity: 0.62;
+    filter: blur(34px) saturate(1.08);
+    transform: scale(1.14);
+    opacity: 0.72;
 }
 
 .story-frame {
@@ -97,7 +97,7 @@
 }
 
 .story.active .story-image-blur {
-    transform: scale(1.08);
+    transform: scale(1.18);
 }
 
 .story.active .story-image-main {
@@ -275,7 +275,8 @@
 
     .story-image-blur {
         inset: -4%;
-        filter: blur(14px) saturate(1.03);
+        filter: blur(22px) saturate(1.05);
+        transform: scale(1.12);
     }
 
     .story-frame {
