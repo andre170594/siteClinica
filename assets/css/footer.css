@@ -21,6 +21,8 @@ footer span#year {
 .footer-link {
     color: #ffffff;
     font-weight: 700;
+    overflow-wrap: anywhere;
+    word-break: break-word;
     transition: opacity 0.2s ease;
 }
 

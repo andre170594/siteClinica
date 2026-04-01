@@ -36,7 +36,18 @@
 .contact-link {
     color: var(--gray-dark);
     font-weight: 700;
+    overflow-wrap: anywhere;
+    word-break: break-word;
     transition: color 0.2s ease;
+}
+
+.contact-item > div:last-child {
+    min-width: 0;
+}
+
+.contact-item p,
+.contact-item small {
+    overflow-wrap: anywhere;
 }
 
 .contact-link:hover,
