@@ -119,9 +119,9 @@
 
 .story-bars {
     position: absolute;
-    top: 18px;
-    left: 22px;
-    right: 22px;
+    top: 30px;
+    left: 34px;
+    right: 34px;
     display: flex;
     gap: 6px;
     z-index: 3;
@@ -255,9 +255,9 @@
     }
 
     .story-bars {
-        top: 8px;
-        left: 8px;
-        right: 8px;
+        top: 18px;
+        left: 18px;
+        right: 18px;
         gap: 4px;
     }
 

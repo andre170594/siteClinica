@@ -80,7 +80,7 @@
     transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
     z-index: 2;
     border: 1px solid #b7dff6;
-    overflow-y: auto;
+    overflow: hidden;
     overscroll-behavior: contain;
 }
 
@@ -113,6 +113,32 @@
 
 .service-expanded > *:last-child {
     margin-bottom: 0;
+}
+
+.service-expanded::-webkit-scrollbar {
+    width: 10px;
+}
+
+.service-expanded::-webkit-scrollbar-track {
+    background: rgba(183, 223, 246, 0.35);
+    border-radius: 999px;
+}
+
+.service-expanded::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #0b6e69, #2a74b2);
+    border-radius: 999px;
+    border: 2px solid rgba(255, 255, 255, 0.85);
+}
+
+.service-expanded::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #095955, #1f6fb2);
+}
+
+@supports (scrollbar-color: auto) {
+    .service-expanded {
+        scrollbar-width: thin;
+        scrollbar-color: #1f6fb2 rgba(183, 223, 246, 0.35);
+    }
 }
 
 @media (hover: hover) and (pointer: fine) {
@@ -176,6 +202,7 @@
 
     .service-expanded {
         padding: 1.5rem 1.25rem;
+        overflow-y: auto;
         -webkit-overflow-scrolling: touch;
     }
 
