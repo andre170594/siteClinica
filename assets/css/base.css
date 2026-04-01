@@ -82,6 +82,7 @@ html {
     transform: translate(0, 0) scale(1);
 }
 
+
 :root {
     --blue-main: #1f6fb2;
     --blue-light: #1680a6;
@@ -96,6 +97,12 @@ html {
     --font-family: "Nunito", sans-serif;
     --font-display: "Cormorant Garamond", serif;
 }
+
+
+
+
+
+
 
 * {
     box-sizing: border-box;
