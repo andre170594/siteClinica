@@ -153,6 +153,35 @@
         padding: 4rem 1rem;
     }
 
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .service-card {
+        padding: 1rem;
+    }
+
+    .service-card-inner {
+        padding: 2rem 1.25rem;
+    }
+
+    .service-expanded {
+        padding: 1.5rem 1.25rem;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .service-expanded h3 {
+        font-size: 1.3rem;
+    }
+
+    .service-expanded p,
+    .service-expanded li,
+    .service-text {
+        font-size: 0.95rem;
+    }
+
     .service-card.active .service-expanded {
         opacity: 1;
         visibility: visible;

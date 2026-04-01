@@ -26,10 +26,13 @@
         card.addEventListener("click", () => {
             if (!isMobile()) return;
 
-            // If any card is open, the current tap only closes it.
-            if (activeCard) {
+            if (activeCard === card) {
                 closeAll();
                 return;
+            }
+
+            if (activeCard) {
+                closeAll();
             }
 
             card.classList.add("active");

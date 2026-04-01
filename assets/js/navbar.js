@@ -6,6 +6,7 @@ const nav = document.querySelector(".nav");
 if (navToggle && nav) {
     navToggle.addEventListener("click", () => {
         nav.classList.toggle("nav-open");
+        document.body.classList.toggle("menu-open", nav.classList.contains("nav-open"));
     });
 }
 
@@ -15,6 +16,7 @@ if (nav) {
     nav.querySelectorAll("a[href^='#']").forEach((link) => {
         link.addEventListener("click", () => {
             nav.classList.remove("nav-open");
+            document.body.classList.remove("menu-open");
         });
     });
 }
@@ -22,6 +24,7 @@ if (nav) {
 window.addEventListener("resize", () => {
     if (window.innerWidth > 768 && nav) {
         nav.classList.remove("nav-open");
+        document.body.classList.remove("menu-open");
     }
 });
 

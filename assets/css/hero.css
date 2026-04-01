@@ -109,6 +109,31 @@
 }
 
 @media(max-width:768px){
-    .hero-title { font-size: 2rem; }
-    .hero-subtitle { font-size: 1rem; }
+    .hero {
+        min-height: 88vh;
+        padding: 5.5rem 0 2.5rem;
+    }
+
+    .hero-content {
+        padding: 0 1rem;
+    }
+
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .hero-actions .btn {
+        width: min(100%, 320px);
+    }
 }

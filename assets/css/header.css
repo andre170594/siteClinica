@@ -189,6 +189,8 @@
         right: 1rem;
         height: auto;
         min-height: 0;
+        max-height: calc(100vh - 88px);
+        overflow-y: auto;
         width: min(78vw, 320px);
         padding: 1.25rem;
         border-radius: 24px;
