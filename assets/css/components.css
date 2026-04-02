@@ -81,4 +81,9 @@
     .btn {
         padding: 0.95rem 1.5rem;
     }
+
+    .btn-outline2 {
+        width: 72px;
+        height: 72px;
+    }
 }
