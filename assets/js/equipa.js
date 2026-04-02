@@ -6,6 +6,7 @@
     const tabs = Array.from(tabsRoot.querySelectorAll("[data-team-tab]"));
     const panels = Array.from(tabsRoot.querySelectorAll("[data-team-panel]"));
     const cards = Array.from(tabsRoot.querySelectorAll("[data-team-card]"));
+    const indicators = Array.from(tabsRoot.querySelectorAll("[data-team-indicator]"));
     let hoverTimer = null;
 
     function isMobile() {
@@ -23,6 +24,10 @@
             const isActive = panel.dataset.teamPanel === target;
             panel.classList.toggle("is-active", isActive);
             panel.setAttribute("aria-hidden", String(!isActive));
+        });
+
+        indicators.forEach((dot) => {
+            dot.classList.toggle("is-active", dot.dataset.teamIndicator === target);
         });
     }
 

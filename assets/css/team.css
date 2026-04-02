@@ -23,9 +23,33 @@
     justify-content: center;
 }
 
+.team-tab-indicator {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.8rem;
+    width: 100%;
+    margin-top: -0.45rem;
+    margin-bottom: -0.15rem;
+}
+
+.team-tab-indicator-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.4);
+    transition: transform 0.25s ease, background-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.team-tab-indicator-dot.is-active {
+    background: #789dbb;
+    transform: scale(1.08);
+    box-shadow: 0 0 0 6px rgba(120, 157, 187, 0.16);
+}
+
 .team-tab {
     border: 1px solid rgba(255, 255, 255, 0.22);
-    background: rgba(120, 157, 187, 0.92);
+    background: rgba(120, 157, 187, 0.62);
     color: #ffffff;
     border-radius: 999px;
     min-height: 42px;
@@ -39,9 +63,9 @@
 }
 
 .team-tab.is-active {
-    background: #789dbb;
-    border-color: rgba(255, 255, 255, 0.4);
-    color: #ffffff;
+    background: rgba(183, 223, 246, 0.95);
+    border-color: rgba(255, 255, 255, 0.55);
+    color: #0e6287;
     box-shadow: 0 10px 24px rgba(10, 44, 63, 0.16);
 }
 
@@ -54,14 +78,14 @@
 .team-panels {
     position: relative;
     display: grid;
-    width: min(100%, 1400px);
+    width: min(100%, 1560px);
 }
 
 .team-panel {
     grid-area: 1 / 1;
     display: grid;
     gap: 1.8rem;
-    padding: 1.6rem 2.2rem 2rem;
+    padding: 1.6rem 2.1rem 1.8rem;
     border-radius: 34px;
     background: rgba(120, 157, 187, 0.78);
     border: 1px solid rgba(255, 255, 255, 0.22);
@@ -130,7 +154,7 @@
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 2.6rem;
-    padding: 0 1rem;
+    padding: 0 0.9rem;
 }
 
 .team-card {
@@ -234,7 +258,7 @@
 
 @media (hover: hover) and (pointer: fine) {
     .team-tab:hover {
-        background: #789dbb;
+        background: rgba(120, 157, 187, 0.88);
         border-color: rgba(255, 255, 255, 0.38);
     }
 
@@ -291,6 +315,11 @@
 
     .team-tab-list {
         gap: 0.5rem;
+    }
+
+    .team-tab-indicator {
+        gap: 0.65rem;
+        margin-top: -0.2rem;
     }
 
     .team-tab {
