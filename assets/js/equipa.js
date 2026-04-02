@@ -1,102 +1,75 @@
-// equipa
 (() => {
-    const cardsTeam = document.querySelectorAll(".team-card");
-    const teamGrid = document.querySelector(".team-grid");
+    const tabsRoot = document.getElementById("teamTabs");
 
-    let index = 0;
-    let interval = null;
-    let activeTeamCard = null;
-    let lastPointerToggle = 0;
+    if (!tabsRoot) return;
+
+    const tabs = Array.from(tabsRoot.querySelectorAll("[data-team-tab]"));
+    const panels = Array.from(tabsRoot.querySelectorAll("[data-team-panel]"));
+    const cards = Array.from(tabsRoot.querySelectorAll("[data-team-card]"));
+    let hoverTimer = null;
 
     function isMobile() {
         return window.innerWidth <= 768;
     }
 
-    function startAutoRotation() {
-        if (!cardsTeam.length || isMobile()) return;
-
-        clearInterval(interval);
-        interval = setInterval(() => {
-            if (activeTeamCard) return;
-
-            cardsTeam.forEach((card) => card.classList.remove("auto-active"));
-            cardsTeam[index].classList.add("auto-active");
-            index = (index + 1) % cardsTeam.length;
-        }, 3000);
-    }
-
-    function stopAutoRotation() {
-        clearInterval(interval);
-        cardsTeam.forEach((card) => card.classList.remove("auto-active"));
-    }
-
-    function closeActiveCard() {
-        if (!activeTeamCard) return;
-
-        activeTeamCard.classList.remove("active");
-        activeTeamCard = null;
-    }
-
-    cardsTeam.forEach((card) => {
-        const toggleCard = () => {
-            if (!isMobile()) return;
-
-            if (activeTeamCard === card) {
-                closeActiveCard();
-                return;
-            }
-
-            closeActiveCard();
-            card.classList.add("active");
-            activeTeamCard = card;
-        };
-
-        card.addEventListener("pointerup", (event) => {
-            if (!isMobile()) return;
-
-            event.preventDefault();
-            event.stopPropagation();
-            lastPointerToggle = Date.now();
-            toggleCard();
+    function activateTab(target) {
+        tabs.forEach((tab) => {
+            const isActive = tab.dataset.teamTab === target;
+            tab.classList.toggle("is-active", isActive);
+            tab.setAttribute("aria-selected", String(isActive));
         });
 
-        card.addEventListener("click", (event) => {
-            if (!isMobile()) return;
-            if (Date.now() - lastPointerToggle < 500) return;
+        panels.forEach((panel) => {
+            const isActive = panel.dataset.teamPanel === target;
+            panel.classList.toggle("is-active", isActive);
+            panel.setAttribute("aria-hidden", String(!isActive));
+        });
+    }
 
-            event.preventDefault();
-            event.stopPropagation();
-            toggleCard();
+    function closeCards() {
+        cards.forEach((card) => card.classList.remove("is-active"));
+    }
+
+    tabs.forEach((tab) => {
+        tab.addEventListener("click", () => {
+            closeCards();
+            activateTab(tab.dataset.teamTab);
+        });
+
+        tab.addEventListener("mouseenter", () => {
+            if (isMobile()) return;
+            window.clearTimeout(hoverTimer);
+            hoverTimer = window.setTimeout(() => {
+                closeCards();
+                activateTab(tab.dataset.teamTab);
+            }, 180);
+        });
+
+        tab.addEventListener("mouseleave", () => {
+            window.clearTimeout(hoverTimer);
         });
     });
 
-    if (cardsTeam.length) {
-        startAutoRotation();
-    }
+    cards.forEach((card) => {
+        card.addEventListener("click", () => {
+            if (!isMobile()) return;
 
-    if (teamGrid) {
-        teamGrid.addEventListener("mouseenter", stopAutoRotation);
-        teamGrid.addEventListener("mouseleave", () => {
-            if (!activeTeamCard) {
-                startAutoRotation();
+            const isActive = card.classList.contains("is-active");
+            closeCards();
+
+            if (!isActive) {
+                card.classList.add("is-active");
             }
         });
-    }
-
-    window.addEventListener("resize", () => {
-        if (!isMobile()) {
-            closeActiveCard();
-            startAutoRotation();
-            return;
-        }
-
-        stopAutoRotation();
     });
 
     document.addEventListener("click", (event) => {
-        if (!isMobile() || !activeTeamCard) return;
-        if (event.target.closest(".team-card")) return;
+        if (!isMobile()) return;
+        if (event.target.closest("[data-team-card]")) return;
+        if (event.target.closest("[data-team-tab]")) return;
 
-        closeActiveCard();
+        closeCards();
     });
+
+    activateTab("psicologia");
 })();

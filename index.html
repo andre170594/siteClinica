@@ -212,129 +212,125 @@
 
     <section id="equipa" class="team fade-section">
       <div class="container">
-        <div class="contact-left reveal reveal-zoom section-header">
-          <div class="section-kicker" style="color: #c7ddfa">Equipa</div>
-          <h2 class="section-title">Profissionais pr&oacute;ximos, humanos e especializados.</h2>
-          <p class="section-subtitle" style="color: rgba(255, 255, 255, 0.82);">
-            Uma equipa multidisciplinar organizada por &aacute;reas para facilitar a leitura em desktop e mobile.
-          </p>
-        </div>
+        <div class="team-tabs contact-left reveal reveal-left" id="teamTabs">
+          <div class="team-tab-list" role="tablist" aria-label="Areas da equipa">
+            <button type="button" class="team-tab is-active" data-team-tab="psicologia" role="tab" aria-selected="true">Psicologia</button>
+            <button type="button" class="team-tab" data-team-tab="terapias" role="tab" aria-selected="false">Terapias</button>
+            <button type="button" class="team-tab" data-team-tab="outras" role="tab" aria-selected="false">Outras &Aacute;reas</button>
+          </div>
 
-        <div class="team-groups">
-          <section class="team-group contact-left reveal reveal-left">
-            <div class="team-group-header">
-              <span class="team-group-kicker">Psicologia</span>
-              <h3>Acompanhamento emocional e desenvolvimento pessoal.</h3>
-            </div>
+          <div class="team-panels">
+            <section class="team-panel is-active" data-team-panel="psicologia" role="tabpanel">
+              <div class="team-panel-header">
+                <span class="team-panel-kicker">Psicologia</span>
+                <h3>Acompanhamento emocional e desenvolvimento pessoal.</h3>
+              </div>
 
-            <div class="team-cards">
-              <article class="team-card">
-                <div class="team-card-media">
-                  <img src="assets/icons/equipa/user02.png" alt="Nome da Profissional" loading="lazy" decoding="async" />
-                </div>
-                <div class="team-card-body">
-                  <span class="team-role">Psic&oacute;loga Cl&iacute;nica</span>
-                  <h4>Nome da Profissional</h4>
-                  <p>Acompanhamento emocional com foco no equil&iacute;brio, rela&ccedil;&otilde;es e bem-estar.</p>
-                </div>
-              </article>
+              <div class="team-panel-cards">
+                <article class="team-card" data-team-card>
+                  <div class="team-card-media">
+                    <img src="assets/icons/equipa/user02.png" alt="Nome da Profissional" loading="lazy" decoding="async" />
+                  </div>
+                  <div class="team-card-summary">
+                    <span class="team-role">Psic&oacute;loga Cl&iacute;nica</span>
+                    <h4>Maria</h4>
+                  </div>
+                  <div class="team-card-detail">
+                    <p>Acompanhamento emocional com foco no equil&iacute;brio, rela&ccedil;&otilde;es e bem-estar.</p>
+                    <p class="team-card-more">Interven&ccedil;&atilde;o orientada para seguran&ccedil;a emocional, escuta atenta e planos ajustados a cada pessoa.</p>
+                  </div>
+                </article>
 
-              <article class="team-card">
-                <div class="team-card-media">
-                  <img src="assets/icons/equipa/user01.png" alt="Profissional de Psicologia" loading="lazy" decoding="async" />
-                </div>
-                <div class="team-card-body">
-                  <span class="team-role">Psic&oacute;loga</span>
-                  <h4>Nome</h4>
-                  <p>Interven&ccedil;&atilde;o individual com abordagem pr&oacute;xima, segura e personalizada.</p>
-                </div>
-              </article>
+                <article class="team-card" data-team-card>
+                  <div class="team-card-media">
+                    <img src="assets/icons/equipa/user01.png" alt="Profissional de Psicologia" loading="lazy" decoding="async" />
+                  </div>
+                  <div class="team-card-summary">
+                    <span class="team-role">Psic&oacute;loga</span>
+                    <h4>Rita</h4>
+                  </div>
+                  <div class="team-card-detail">
+                    <p>Interven&ccedil;&atilde;o individual com abordagem pr&oacute;xima, segura e personalizada.</p>
+                    <p class="team-card-more">Acompanhamento pensado para clarificar objetivos, refor&ccedil;ar recursos internos e promover estabilidade.</p>
+                  </div>
+                </article>
+              </div>
+            </section>
 
-              <article class="team-card">
-                <div class="team-card-media">
-                  <img src="assets/icons/equipa/user02.png" alt="Profissional de Psicologia Infantil" loading="lazy" decoding="async" />
-                </div>
-                <div class="team-card-body">
-                  <span class="team-role">Psicologia Infantil</span>
-                  <h4>Nome</h4>
-                  <p>Apoio a crian&ccedil;as e fam&iacute;lias com foco em desenvolvimento, regula&ccedil;&atilde;o e adapta&ccedil;&atilde;o.</p>
-                </div>
-              </article>
-            </div>
-          </section>
+            <section class="team-panel" data-team-panel="terapias" role="tabpanel" hidden>
+              <div class="team-panel-header">
+                <span class="team-panel-kicker">Terapias</span>
+                <h3>Interven&ccedil;&atilde;o funcional, comunica&ccedil;&atilde;o e autonomia.</h3>
+              </div>
 
-          <section class="team-group contact-left reveal reveal-right">
-            <div class="team-group-header">
-              <span class="team-group-kicker">Terapias</span>
-              <h3>Interven&ccedil;&atilde;o funcional, comunica&ccedil;&atilde;o e autonomia.</h3>
-            </div>
+              <div class="team-panel-cards">
+                <article class="team-card" data-team-card>
+                  <div class="team-card-media">
+                    <img src="assets/icons/equipa/user01.png" alt="Joana Alcaide" loading="lazy" decoding="async" />
+                  </div>
+                  <div class="team-card-summary">
+                    <span class="team-role">Terapia da Fala</span>
+                    <h4>Joana Alcaide</h4>
+                  </div>
+                  <div class="team-card-detail">
+                    <p>Especialista em perturba&ccedil;&otilde;es da comunica&ccedil;&atilde;o, linguagem e fala.</p>
+                    <p class="team-card-more">Avalia&ccedil;&atilde;o e interven&ccedil;&atilde;o centradas na funcionalidade, autonomia e comunica&ccedil;&atilde;o do dia a dia.</p>
+                  </div>
+                </article>
 
-            <div class="team-cards">
-              <article class="team-card">
-                <div class="team-card-media">
-                  <img src="assets/icons/equipa/user01.png" alt="Joana Alcaide" loading="lazy" decoding="async" />
-                </div>
-                <div class="team-card-body">
-                  <span class="team-role">Terapia da Fala</span>
-                  <h4>Joana Alcaide</h4>
-                  <p>Especialista em perturba&ccedil;&otilde;es da comunica&ccedil;&atilde;o, linguagem e fala.</p>
-                </div>
-              </article>
+                <article class="team-card" data-team-card>
+                  <div class="team-card-media">
+                    <img src="assets/icons/equipa/user01.png" alt="Profissional de Terapia Ocupacional" loading="lazy" decoding="async" />
+                  </div>
+                  <div class="team-card-summary">
+                    <span class="team-role">Terapia Ocupacional</span>
+                    <h4>Nome</h4>
+                  </div>
+                  <div class="team-card-detail">
+                    <p>Promo&ccedil;&atilde;o da autonomia e qualidade de vida nas atividades do dia a dia.</p>
+                    <p class="team-card-more">Acompanhamento focado em participa&ccedil;&atilde;o, adapta&ccedil;&atilde;o ao contexto e ganho funcional sustentado.</p>
+                  </div>
+                </article>
+              </div>
+            </section>
 
-              <article class="team-card">
-                <div class="team-card-media">
-                  <img src="assets/icons/equipa/user01.png" alt="Profissional de Terapia Ocupacional" loading="lazy" decoding="async" />
-                </div>
-                <div class="team-card-body">
-                  <span class="team-role">Terapia Ocupacional</span>
-                  <h4>Nome</h4>
-                  <p>Promo&ccedil;&atilde;o da autonomia e qualidade de vida nas atividades do dia a dia.</p>
-                </div>
-              </article>
+            <section class="team-panel" data-team-panel="outras" role="tabpanel" hidden>
+              <div class="team-panel-header">
+                <span class="team-panel-kicker">Outras &Aacute;reas</span>
+                <h3>Acompanhamento complementar e suporte multidisciplinar.</h3>
+              </div>
 
-              <article class="team-card">
-                <div class="team-card-media">
-                  <img src="assets/icons/equipa/user02.png" alt="Profissional de Terapia" loading="lazy" decoding="async" />
-                </div>
-                <div class="team-card-body">
-                  <span class="team-role">Terapia</span>
-                  <h4>Nome</h4>
-                  <p>Interven&ccedil;&atilde;o orientada para funcionalidade, conforto e progressos sustentados.</p>
-                </div>
-              </article>
-            </div>
-          </section>
+              <div class="team-panel-cards">
+                <article class="team-card" data-team-card>
+                  <div class="team-card-media">
+                    <img src="assets/icons/equipa/user02.png" alt="Profissional de Especialidade" loading="lazy" decoding="async" />
+                  </div>
+                  <div class="team-card-summary">
+                    <span class="team-role">Especialidade</span>
+                    <h4>Maria</h4>
+                  </div>
+                  <div class="team-card-detail">
+                    <p>Descri&ccedil;&atilde;o breve da &aacute;rea e da forma como complementa a equipa.</p>
+                    <p class="team-card-more">Suporte complementar em articula&ccedil;&atilde;o com as restantes &aacute;reas, para uma resposta mais integrada.</p>
+                  </div>
+                </article>
 
-          <section class="team-group contact-left reveal reveal-left">
-            <div class="team-group-header">
-              <span class="team-group-kicker">Outras &Aacute;reas</span>
-              <h3>Acompanhamento complementar e suporte multidisciplinar.</h3>
-            </div>
-
-            <div class="team-cards team-cards-compact">
-              <article class="team-card">
-                <div class="team-card-media">
-                  <img src="assets/icons/equipa/user02.png" alt="Profissional de Especialidade" loading="lazy" decoding="async" />
-                </div>
-                <div class="team-card-body">
-                  <span class="team-role">Especialidade</span>
-                  <h4>Nome</h4>
-                  <p>Descri&ccedil;&atilde;o breve da &aacute;rea e da forma como complementa a equipa.</p>
-                </div>
-              </article>
-
-              <article class="team-card">
-                <div class="team-card-media">
-                  <img src="assets/icons/equipa/user01.png" alt="Profissional de Especialidade" loading="lazy" decoding="async" />
-                </div>
-                <div class="team-card-body">
-                  <span class="team-role">Especialidade</span>
-                  <h4>Nome</h4>
-                  <p>Acompanhamento t&eacute;cnico e humano com foco no percurso de cada pessoa.</p>
-                </div>
-              </article>
-            </div>
-          </section>
+                <article class="team-card" data-team-card>
+                  <div class="team-card-media">
+                    <img src="assets/icons/equipa/user01.png" alt="Profissional de Especialidade" loading="lazy" decoding="async" />
+                  </div>
+                  <div class="team-card-summary">
+                    <span class="team-role">Especialidade</span>
+                    <h4>Rita</h4>
+                  </div>
+                  <div class="team-card-detail">
+                    <p>Acompanhamento t&eacute;cnico e humano com foco no percurso de cada pessoa.</p>
+                    <p class="team-card-more">Interven&ccedil;&atilde;o colaborativa, com aten&ccedil;&atilde;o ao contexto familiar, escolar ou profissional.</p>
+                  </div>
+                </article>
+              </div>
+            </section>
+          </div>
         </div>
       </div>
     </section>
@@ -519,6 +515,7 @@
 <script src="assets/js/main.js"></script>
 <script src="assets/js/heroSlider.js"></script>
 <script src="assets/js/services.js"></script>
+<script src="assets/js/equipa.js"></script>
     <script src="assets/js/galeria.js"></script>
 <script src="assets/js/navbar.js"></script>
 <script src="assets/js/form.js"></script>
