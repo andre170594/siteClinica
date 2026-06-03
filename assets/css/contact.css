@@ -129,6 +129,19 @@
     gap: 0.5rem;
 }
 
+.privacy-link {
+    color: #ffffff;
+    font-weight: 800;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.privacy-link:hover,
+.privacy-link:focus-visible {
+    color: #d6f3ff;
+    outline: none;
+}
+
 .contact-form label {
     display: flex;
     flex-direction: column;
@@ -156,6 +169,30 @@
 
 .btn-submit:hover {
     background: #095955;
+}
+
+.btn-submit:disabled {
+    cursor: wait;
+    opacity: 0.72;
+}
+
+.form-status {
+    min-height: 1.4rem;
+    color: rgba(255, 255, 255, 0.92);
+    font-size: 0.9rem;
+    line-height: 1.45;
+}
+
+.form-status[data-status="success"] {
+    color: #d8ffe8;
+}
+
+.form-status[data-status="error"] {
+    color: #ffe0e0;
+}
+
+.form-status[data-status="info"] {
+    color: #d6f3ff;
 }
 
 @media(max-width: 1200px) {

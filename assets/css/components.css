@@ -74,6 +74,11 @@
     object-fit: contain;
 }
 
+.social-link[aria-disabled="true"] {
+    cursor: default;
+    pointer-events: none;
+}
+
 /* alinhar o grupo */
 .contact-item {
     display: flex;

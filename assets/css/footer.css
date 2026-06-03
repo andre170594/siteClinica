@@ -32,6 +32,13 @@ footer span#year {
     outline: none;
 }
 
+.footer-socials {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-top: 1rem;
+}
+
 /* Opcional: responsivo */
 @media (max-width: 768px) {
     footer {

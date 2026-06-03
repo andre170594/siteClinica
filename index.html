@@ -40,11 +40,11 @@
         <div class="nav-overlay"></div>
         <a class="logo" href="#inicio" aria-label="Ir para o topo da p&aacute;gina">
           <div class="logo-icon">
-            <img src="assets/icons/logos/logo2.png" alt="Logo da Cl&iacute;nica Bem-Estar" decoding="async" />
+            <img src="assets/icons/logos/logo3.png" alt="Logo da Cl&iacute;nica Bem-Estar" decoding="async" />
           </div>
           <div>
-            <div class="logo-text-main">Cl&iacute;nica Bem-Estar</div>
-            <div class="logo-text-sub">Cuidar de si, com calma.</div>
+            <div class="logo-text-main" style="color: #0b6e69">Cl&iacute;nica e</div>
+            <div class="logo-text-sub" style="color: #0b6e69">Centro de formação.</div>
           </div>
         </a>
 
@@ -57,12 +57,12 @@
         </div>
 
         <div class="nav-cta">
-          <button class="btn btn-outline2" id="btn_face" onclick="scrollToSection('equipa')" aria-label="Ir para a equipa">
-            <img src="assets/icons/face.png" alt="Facebook" />
-          </button>
-          <button class="btn btn-outline2" id="btn_insta" onclick="scrollToSection('equipa')" aria-label="Ir para a equipa">
-            <img src="assets/icons/insta.png" alt="Instagram" />
-          </button>
+          <a class="btn btn-outline2 social-link" href="#" aria-label="Facebook por configurar" aria-disabled="true" tabindex="-1">
+            <img src="assets/icons/face.png" alt="" aria-hidden="true" />
+          </a>
+          <a class="btn btn-outline2 social-link" href="#" aria-label="Instagram por configurar" aria-disabled="true" tabindex="-1">
+            <img src="assets/icons/insta.png" alt="" aria-hidden="true" />
+          </a>
         </div>
 
         <button class="nav-toggle" aria-label="Abrir menu" aria-controls="primaryNav" aria-expanded="false">
@@ -359,7 +359,7 @@
               <span>Mira</span>
             </div>
           </div>
-          <div class="story-badge">Espaços</div>
+          <div class="story-badge">Espa&ccedil;os</div>
         </div>
 
         <div class="story">
@@ -424,7 +424,7 @@
             </p>
 
             <div class="contact-item">
-              <div class="contact-icon" aria-hidden="true">📍</div>
+              <div class="contact-icon" aria-hidden="true">&#128205;</div>
               <div>
                 <p>Rua do Bem-Estar, 123</p>
                 <p>3000-000 Coimbra</p>
@@ -432,7 +432,7 @@
             </div>
 
             <div class="contact-item">
-              <div class="contact-icon" aria-hidden="true">📞</div>
+              <div class="contact-icon" aria-hidden="true">&#9742;</div>
               <div>
                 <p><a class="contact-link" href="tel:+351912345678">+351 91 234 56 78</a></p>
                 <small>(Chamada para a rede m&oacute;vel nacional)</small>
@@ -440,7 +440,7 @@
             </div>
 
             <div class="contact-item">
-              <div class="contact-icon" aria-hidden="true">✉️</div>
+              <div class="contact-icon" aria-hidden="true">&#9993;</div>
               <div>
                 <p><a class="contact-link" href="mailto:geral@clinicabemestar.pt">geral@clinicabemestar.pt</a></p>
               </div>
@@ -466,10 +466,11 @@
 
               <label class="checkbox">
                 <input type="checkbox" required>
-                Li e concordo com a Pol&iacute;tica de Privacidade
+                Li e concordo com a <a class="privacy-link" href="#contactos">Pol&iacute;tica de Privacidade</a>
               </label>
 
               <button type="submit" class="btn-submit">Submeter</button>
+              <p id="formStatus" class="form-status" role="status" aria-live="polite"></p>
             </form>
           </div>
         </div>
@@ -509,16 +510,13 @@
       <p><a class="footer-link" href="tel:+351927465938">927 465 938</a></p>
       <p><a class="footer-link" href="mailto:geral@clinicabemestar.pt">geral@clinicabemestar.pt</a></p>
 
-      <div class="contact-item" style="margin-top: 10px;">
-        <button class="btn btn-outline2" id="btn_facse" onclick="scrollToSection('equipa')" aria-label="Ir para a equipa">
-          <img src="assets/icons/face.png" alt="Facebook" />
-        </button>
-        <button class="btn btn-outline2" id="btn_facesa" onclick="scrollToSection('equipa')" aria-label="Ir para a equipa">
-          <img src="assets/icons/insta.png" alt="Instagram" />
-        </button>
-        <button class="btn btn-outline2" id="btn_faces" onclick="scrollToSection('equipa')" aria-label="Ir para a equipa">
-          <img src="assets/icons/face.png" alt="Facebook" />
-        </button>
+      <div class="footer-socials">
+        <a class="btn btn-outline2 social-link" href="#" aria-label="Facebook por configurar" aria-disabled="true" tabindex="-1">
+          <img src="assets/icons/face.png" alt="" aria-hidden="true" />
+        </a>
+        <a class="btn btn-outline2 social-link" href="#" aria-label="Instagram por configurar" aria-disabled="true" tabindex="-1">
+          <img src="assets/icons/insta.png" alt="" aria-hidden="true" />
+        </a>
       </div>
     </div>
   </section>
