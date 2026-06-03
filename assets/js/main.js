@@ -24,13 +24,22 @@ function scrollToSection(id) {
 
 // LOADER
 
-window.addEventListener("load", () => {
+function hideSiteLoader() {
     const loader = document.getElementById("site-loader");
+    if (!loader || loader.classList.contains("hidden")) return;
 
-    setTimeout(() => {
-        loader.classList.add("hidden");
-    }, 600); // pequeno delay para ficar elegante
+    loader.classList.add("hidden");
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    setTimeout(hideSiteLoader, 500);
 });
+
+window.addEventListener("load", () => {
+    setTimeout(hideSiteLoader, 600);
+});
+
+setTimeout(hideSiteLoader, 2000);
 
 
 // SCROLL REVEAL

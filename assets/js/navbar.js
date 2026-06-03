@@ -2,11 +2,21 @@
 const navToggle = document.querySelector(".nav-toggle");
 const nav = document.querySelector(".nav");
 
+function setMenuOpen(isOpen) {
+    if (!nav) return;
+
+    nav.classList.toggle("nav-open", isOpen);
+    document.body.classList.toggle("menu-open", isOpen);
+
+    if (navToggle) {
+        navToggle.setAttribute("aria-expanded", String(isOpen));
+        navToggle.setAttribute("aria-label", isOpen ? "Fechar menu" : "Abrir menu");
+    }
+}
 
 if (navToggle && nav) {
     navToggle.addEventListener("click", () => {
-        nav.classList.toggle("nav-open");
-        document.body.classList.toggle("menu-open", nav.classList.contains("nav-open"));
+        setMenuOpen(!nav.classList.contains("nav-open"));
     });
 }
 
@@ -15,16 +25,14 @@ if (navToggle && nav) {
 if (nav) {
     nav.querySelectorAll("a[href^='#']").forEach((link) => {
         link.addEventListener("click", () => {
-            nav.classList.remove("nav-open");
-            document.body.classList.remove("menu-open");
+            setMenuOpen(false);
         });
     });
 }
 
 window.addEventListener("resize", () => {
     if (window.innerWidth > 768 && nav) {
-        nav.classList.remove("nav-open");
-        document.body.classList.remove("menu-open");
+        setMenuOpen(false);
     }
 });
 
