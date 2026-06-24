@@ -18,7 +18,12 @@
     inset: 0;
     z-index: 1;
     pointer-events: none;
-    background: linear-gradient(180deg, rgba(5, 46, 64, 0.18), rgba(5, 46, 64, 0.1) 42%, rgba(5, 46, 64, 0.24));
+    background: linear-gradient(
+            180deg,
+            var(--hero-grad-1),
+            var(--hero-grad-2) 42%,
+            var(--hero-grad-3)
+    );
 }
 
 .hero-slider .slide {
@@ -40,7 +45,7 @@
 .hero-overlay {
     position: absolute;
     inset: 0;
-    background: rgba(0,0,0,0.35);
+    background: var(--hero-overlay);
     z-index: 1;
 }
 
@@ -110,7 +115,7 @@
     height: 12px;
     border-radius: 50%;
     border: none;
-    background: rgba(255,255,255,0.5);
+    background: var(--hero-indicator);
     cursor: pointer;
     transition: background 0.3s ease;
 }

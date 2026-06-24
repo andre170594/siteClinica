@@ -5,8 +5,8 @@
 .team {
     padding: 2.75rem 1rem 5rem;
     background:
-        radial-gradient(circle at top left, rgba(255, 255, 255, 0.16), transparent 30%),
-        linear-gradient(180deg, #1680a6 0%, #137395 55%, #0e6287 100%);
+            radial-gradient(circle at top left, var(--team-bg-radial), transparent 30%),
+            linear-gradient(180deg, var(--team-bg-grad-1) 0%, var(--team-bg-grad-2) 55%, var(--team-bg-grad-3) 100%);
 }
 
 .team-tabs {
@@ -37,20 +37,20 @@
     width: 8px;
     height: 8px;
     border-radius: 999px;
-    background: rgba(255, 255, 255, 0.4);
+    background: var(--team-tab-indicator);
     transition: transform 0.25s ease, background-color 0.25s ease, box-shadow 0.25s ease;
 }
 
 .team-tab-indicator-dot.is-active {
-    background: rgba(255, 255, 255, 0.98);
+    background: var(--team-tab-indicator-active);
     transform: scale(1.08);
-    box-shadow: 0 0 0 6px rgba(183, 223, 246, 0.2);
+    box-shadow: 0 0 0 6px var(--team-tab-indicator-ring);
 }
 
 .team-tab {
-    border: 1px solid rgba(255, 255, 255, 0.22);
-    background: rgba(120, 157, 187, 0.62);
-    color: #ffffff;
+    border: 1px solid var(--team-tab-border);
+    background: var(--team-tab-bg);
+    color: var(--team-tab-text);
     border-radius: 999px;
     min-height: 42px;
     padding: 0.65rem 1rem;
@@ -63,10 +63,10 @@
 }
 
 .team-tab.is-active {
-    background: rgba(183, 223, 246, 0.95);
-    border-color: rgba(255, 255, 255, 0.55);
-    color: #0e6287;
-    box-shadow: 0 10px 24px rgba(10, 44, 63, 0.16);
+    background: var(--team-tab-active-bg);
+    border-color: var(--team-tab-active-border);
+    color: var(--team-tab-active-text);
+    box-shadow: 0 10px 24px var(--team-tab-active-shadow);
 }
 
 .team-tab:hover,
@@ -87,19 +87,19 @@
     gap: 1.8rem;
     padding: 1.6rem 2.1rem 1.8rem;
     border-radius: 34px;
-    background: rgba(120, 157, 187, 0.78);
-    border: 1px solid rgba(255, 255, 255, 0.22);
-    box-shadow: 0 28px 60px rgba(7, 31, 46, 0.16);
+    background: var(--team-panel-bg);
+    border: 1px solid var(--team-panel-border);
+    box-shadow: 0 28px 60px var(--team-panel-shadow);
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
     transform: translateY(20px);
     filter: blur(8px);
     transition:
-        opacity 1.05s cubic-bezier(0.22, 1, 0.36, 1),
-        transform 1.05s cubic-bezier(0.22, 1, 0.36, 1),
-        filter 1.05s cubic-bezier(0.22, 1, 0.36, 1),
-        visibility 0s linear 1.05s;
+            opacity 1.05s cubic-bezier(0.22, 1, 0.36, 1),
+            transform 1.05s cubic-bezier(0.22, 1, 0.36, 1),
+            filter 1.05s cubic-bezier(0.22, 1, 0.36, 1),
+            visibility 0s linear 1.05s;
 }
 
 .team-panel.is-active {
@@ -109,10 +109,10 @@
     transform: translateY(0);
     filter: blur(0);
     transition:
-        opacity 1.05s cubic-bezier(0.22, 1, 0.36, 1),
-        transform 1.05s cubic-bezier(0.22, 1, 0.36, 1),
-        filter 1.05s cubic-bezier(0.22, 1, 0.36, 1),
-        visibility 0s linear 0s;
+            opacity 1.05s cubic-bezier(0.22, 1, 0.36, 1),
+            transform 1.05s cubic-bezier(0.22, 1, 0.36, 1),
+            filter 1.05s cubic-bezier(0.22, 1, 0.36, 1),
+            visibility 0s linear 0s;
 }
 
 .team-panel.is-active .team-panel-header {
@@ -145,9 +145,9 @@
     min-height: 34px;
     padding: 0.35rem 0.85rem;
     border-radius: 999px;
-    background: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    color: rgba(255, 255, 255, 0.94);
+    background: var(--team-kicker-bg);
+    border: 1px solid var(--team-kicker-border);
+    color: var(--team-kicker-text);
     font-size: 0.76rem;
     font-weight: 800;
     letter-spacing: 0.1em;
@@ -155,39 +155,11 @@
 }
 
 .team-panel-header h3 {
-    color: #fff;
+    color: var(--team-header-text);
     font-size: 1.7rem;
     line-height: 1.05;
     font-family: var(--font-display), serif;
     font-weight: 600;
-}
-
-@keyframes teamContentIn {
-    from {
-        opacity: 0;
-        transform: translateY(18px);
-        filter: blur(6px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-        filter: blur(0);
-    }
-}
-
-@keyframes teamCardIn {
-    from {
-        opacity: 0;
-        transform: translateY(28px) scale(0.985);
-        filter: blur(8px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0) scale(1);
-        filter: blur(0);
-    }
 }
 
 .team-panel-cards {
@@ -202,9 +174,9 @@
     min-height: 420px;
     border-radius: 28px;
     overflow: hidden;
-    background: rgba(255, 255, 255, 0.08);
-    border: 1px solid rgba(255, 255, 255, 0.18);
-    box-shadow: 0 18px 42px rgba(6, 28, 41, 0.14);
+    background: var(--team-card-bg);
+    border: 1px solid var(--team-card-border);
+    box-shadow: var(--team-card-shadow);
     transition: transform 0.24s ease, box-shadow 0.24s ease, border-color 0.24s ease, opacity 0.24s ease;
 }
 
@@ -219,7 +191,7 @@
 .team-card-media img {
     object-fit: cover;
     object-position: center top;
-    background: rgb(183, 223, 246);
+    background: var(--team-card-media-bg);
     transform: scale(1.02);
     transition: transform 0.45s ease, filter 0.45s ease;
 }
@@ -228,7 +200,7 @@
     content: "";
     position: absolute;
     inset: 0;
-    background: linear-gradient(180deg, rgba(4, 22, 33, 0.08), rgba(4, 22, 33, 0.42) 50%, rgba(4, 22, 33, 0.86) 100%);
+    background: linear-gradient(180deg, var(--team-card-overlay-1), var(--team-card-overlay-2) 50%, var(--team-card-overlay-3) 100%);
 }
 
 .team-card-summary,
@@ -237,7 +209,7 @@
     left: 1.6rem;
     right: 1.6rem;
     z-index: 1;
-    color: #fff;
+    color: var(--white);
 }
 
 .team-card-summary {
@@ -255,9 +227,9 @@
     min-height: 31px;
     padding: 0.26rem 0.72rem;
     border-radius: 999px;
-    background: rgba(120, 157, 187, 0.22);
-    border: 1px solid rgba(183, 223, 246, 0.34);
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
+    background: var(--team-role-bg);
+    border: 1px solid var(--team-role-border);
+    box-shadow: inset 0 1px 0 var(--team-role-highlight);
     backdrop-filter: blur(10px);
     font-size: 0.74rem;
     font-weight: 800;
@@ -282,8 +254,8 @@
     text-align: center;
     padding: 1.4rem 1.8rem;
     border-radius: 18px;
-    background: rgba(22, 128, 166, 0.48);
-    border: 1px solid rgba(183, 223, 246, 0.28);
+    background: var(--team-detail-bg);
+    border: 1px solid var(--team-detail-border);
     backdrop-filter: blur(14px);
     transform: translateY(14px);
     opacity: 0;
@@ -293,23 +265,23 @@
 }
 
 .team-card-detail p {
-    color: rgba(255, 255, 255, 0.98);
+    color: var(--team-detail-text);
     font-size: 0.97rem;
     line-height: 1.65;
     max-width: 42ch;
     margin: 0 auto;
-    text-shadow: 0 1px 2px rgba(12, 58, 82, 0.22);
+    text-shadow: 0 1px 2px var(--team-detail-shadow);
 }
 
 .team-card-more {
     margin-top: 0.8rem;
-    color: rgba(232, 246, 252, 0.96);
+    color: var(--team-more);
 }
 
 @media (hover: hover) and (pointer: fine) {
     .team-tab:not(.is-active):hover {
-        background: rgba(120, 157, 187, 0.88);
-        border-color: rgba(255, 255, 255, 0.38);
+        background: var(--team-tab-hover-bg);
+        border-color: var(--team-tab-hover-border);
     }
 
     .team-panel-cards:hover .team-card {
@@ -318,8 +290,8 @@
 
     .team-card:hover {
         transform: translateY(-4px) scale(1.01);
-        border-color: rgba(255, 255, 255, 0.3);
-        box-shadow: 0 26px 60px rgba(5, 24, 35, 0.22);
+        border-color: var(--team-card-hover-border);
+        box-shadow: 0 26px 60px var(--team-card-hover-shadow);
         opacity: 1;
     }
 
@@ -336,15 +308,15 @@
     .team-card:hover .team-card-detail {
         opacity: 1;
         transform: translateY(0);
-        background: rgba(22, 128, 166, 0.64);
+        background: var(--team-detail-bg-hover);
     }
 }
 
-.team-card.is-active {
-    transform: translateY(-2px);
-    border-color: rgba(255, 255, 255, 0.28);
-    box-shadow: 0 24px 52px rgba(5, 24, 35, 0.18);
-}
+    .team-card.is-active {
+        transform: translateY(-2px);
+        border-color: var(--team-card-hover-border);
+        box-shadow: 0 24px 52px rgba(5, 24, 35, 0.18);
+    }
 
 .team-card.is-active .team-card-media img {
     transform: scale(1.05);
@@ -359,7 +331,7 @@
 .team-card.is-active .team-card-detail {
     opacity: 1;
     transform: translateY(0);
-    background: rgba(22, 128, 166, 0.64);
+    background: var(--team-detail-bg-hover);
 }
 
 @media (max-width: 768px) {

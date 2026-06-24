@@ -1,6 +1,6 @@
 footer {
-    background: rgba(106, 139, 156, 0.83);
-    color: #ffffff;
+    background: var(--footer-bg);
+    color: var(--white);
     padding: 3rem 1rem; /* altura maior */
     text-align: center;
     display: flex;
@@ -19,7 +19,7 @@ footer span#year {
 }
 
 .footer-link {
-    color: #ffffff;
+    color: var(--white);
     font-weight: 700;
     overflow-wrap: anywhere;
     word-break: break-word;

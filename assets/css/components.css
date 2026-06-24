@@ -63,7 +63,7 @@
 
 /* HOVER */
 .btn-outline2:hover {
-    background: var(--blue-main);
+    background: var(--brand-blue);
     transform: translateY(-2px);
 }
 
@@ -76,13 +76,6 @@
 
 .social-link[aria-disabled="true"] {
     cursor: default;
-    pointer-events: none;
-}
-
-/* alinhar o grupo */
-.contact-item {
-    display: flex;
-    gap: 10px;
 }
 
 @media (max-width: 768px) {
